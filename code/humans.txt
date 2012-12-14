@@ -17,4 +17,9 @@
 # TECHNOLOGY
 
     HTML5, CSS3
-    jQuery, Modernizr, Bootstrap
+    jQuery
+    Modernizr
+    Bootstrap
+    HTML5Boilerplate
+    holder.js
+    Font Awesome More
