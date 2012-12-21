@@ -6,7 +6,12 @@
   
   <title><!-- $title --> | <!-- $site_name --></title>
     
-  <link rel="stylesheet/less" href="<!-- @path style.less -->">
+  <link href="<!-- @path style.less -->" rel="stylesheet/less">
+  
+  <!-- less script -->
+    <script>var less = { env: ‘development’ };</script>
+    <script src="js/vendor/less.js"></script>
+  <!-- end less script -->
   
   <!-- @javascript less.js -->
   <!-- @javascript modernizr.js -->

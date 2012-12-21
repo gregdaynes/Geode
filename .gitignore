@@ -1,5 +1,7 @@
 *.esproj
 Build/
+publish/*
+resources/tmp
 
 # OS generated files #
 ######################
