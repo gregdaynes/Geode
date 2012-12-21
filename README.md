@@ -17,6 +17,10 @@ My initial starting point for front-end work
 9. upload publish folder to server
 10. sleep. You've earned it.
 
+### Note:
+
+Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
+
 ## ToDo / Completed
 
 + ~~clean-up build-script~~
