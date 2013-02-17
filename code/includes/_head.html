@@ -1,29 +1,29 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="cleartype" content="on">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <!-- @include _graph.html -->
+<meta charset="utf-8">
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- @include _graph.html -->
+
+<title><!-- $title --> | <!-- $site_name --></title>
   
-  <title><!-- $title --> | <!-- $site_name --></title>
-    
-  <link href="<!-- @path style.less -->" rel="stylesheet/less">
+<link href="<!-- @path style.less -->" rel="stylesheet/less">
+
+<!-- @include _ie.html -->
+
+<!-- less script -->
+  <script src="<!-- @path less.js -->"></script>
+<!-- end less script -->
+
+<!-- @javascript modernizr.js -->
+<!-- @javascript holder.js -->
   
-  <!-- @include _ie.html -->
-  
-  <!-- less script -->
-    <script src="<!-- @path less.js -->"></script>
-  <!-- end less script -->
-  
-  <!-- @javascript modernizr.js -->
-  <!-- @javascript holder.js -->
-    
-  <!-- Icons -->
-  <!-- <link rel="shortcut icon" href="#"> -->
-  <link rel="logo" type="image/svg" href="<!-- $url -->/logo.svg" /> <!-- relogo.org -->
-  <!-- [http://www.jonathantneal.com/blog/understand-the-favicon/] IE will ignore the <link rel="icon"> and use the ICO favicon found in the root of the domain as /favicon.ico. All other browsers will use the PNG favicon displayed with: -->
-  <link rel="shortcut icon" href="<!-- @path favicon-32x32.png -->"> <!-- 32x32 -->
-  
-  <meta name="msapplication-TileColor" content="<!-- $site_color -->"> <!-- IE10 Metro Tile - Background color -->
-  <meta name="msapplication-TileImage" content="<!-- @path metro-tile.png -->"> <!-- IE10 Metro Tile - Icon -->
-  
-  <!-- @include _head.mobile.html -->
+<!-- Icons -->
+<!-- <link rel="shortcut icon" href="#"> -->
+<link rel="logo" type="image/svg" href="<!-- $url -->/logo.svg" /> <!-- relogo.org -->
+<!-- [http://www.jonathantneal.com/blog/understand-the-favicon/] IE will ignore the /link rel="icon"/ and use the ICO favicon found in the root of the domain as /favicon.ico. All other browsers will use the PNG favicon displayed with: -->
+<link rel="shortcut icon" href="<!-- @path favicon-32x32.png -->"> <!-- 32x32 -->
+
+<meta name="msapplication-TileColor" content="<!-- $site_color -->"> <!-- IE10 Metro Tile - Background color -->
+<meta name="msapplication-TileImage" content="<!-- @path metro-tile.png -->"> <!-- IE10 Metro Tile - Icon -->
+
+<!-- @include _head.mobile.html -->
