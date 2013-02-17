@@ -2,14 +2,6 @@ Hammer Template
 ===============
 
 ## Todo
- 
-### Testing
-
-+ [Font Awesome 3.0](http://fortawesome.github.com/Font-Awesome)
-  + [Font Awesome More 3.0.2](http://gregoryloucas.github.com/Font-Awesome-More/)
-+ [Bootstrap 2.3](http://twitter.github.com/bootstrap/)
-  + update templates to reflect changes
-
 
 ## Completed
 
@@ -44,6 +36,10 @@ Hammer Template
 + [jQuery 1.9.1](http://jquery.com)
 + [relogo](http://relogo.org/)
 + [holder.js 1.9](http://imsky.github.com/holder/)
++ [Font Awesome 3.0](http://fortawesome.github.com/Font-Awesome)
+  + [Font Awesome More 3.0.2](http://gregoryloucas.github.com/Font-Awesome-More/)
++ [Bootstrap 2.3](http://twitter.github.com/bootstrap/)
+  + update templates to reflect changes
 
 ## Libraries Included
 
