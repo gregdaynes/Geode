@@ -1,13 +1,16 @@
 Hammer Template
 ===============
 
-1. Todo
-2. Complete
-3. Libraries
-
 ## Todo
-  
-  
+ 
+### Testing
+
++ [Font Awesome 3.0](http://fortawesome.github.com/Font-Awesome)
+  + [Font Awesome More 3.0.2](http://gregoryloucas.github.com/Font-Awesome-More/)
++ [Bootstrap 2.3](http://twitter.github.com/bootstrap/)
+  + update templates to reflect changes
+
+
 ## Completed
 
 + clean-up build-script
@@ -29,7 +32,6 @@ Hammer Template
 + add #footer to footer
 + update lesscss to 1.3.3
 + update font awesome more to 2.1
-+ JQuery 1.9.0
 + split up includes folder
   + Elements [header, footer, chrome frame, nav etc] are now in elements folder
   + includes is mostly parts on every page
@@ -39,32 +41,43 @@ Hammer Template
 + eval H5BP recent changes
   + leaving HiDPI up to individual developers to implement
   + [add .ir technique](https://github.com/h5bp/html5-boilerplate/issues/1239)
++ [jQuery 1.9.1](http://jquery.com)
++ [relogo](http://relogo.org/)
++ [holder.js 1.9](http://imsky.github.com/holder/)
 
 ## Libraries Included
 
 + jQuery
-  + version: 1.8.3
+  + version: 1.9.1
   + [jquery.com](http://jquery.com)
 + Modernizr
   + version: 2.6.2
   + [modernizr.com](http://modernizr.com)
 + Bootstrap
-  + version: 2.2.2
+  + version: 2.2.3
   + [getbootstrap.com](http://getbootstrap.com)
 + HTML5Boilerplate
-  + version: 4.0.1
+  + version: 4.1.0
   + [html5boilerplate.com](http://html5boilerplate.com/)
 + holder.js
-  + version: 1.7
+  + version: 1.9
   + [github](http://imsky.github.com/holder/)
 + Font Awesome More
-  + version: 2.0
-  + [github](http://gregoryloucas.github.com/Font-Awesome-More/)
+  + version: 3.0.2
+  + [github](http://fortawesome.github.com/Font-Awesome/)
+  + [more](http://gregoryloucas.github.com/Font-Awesome-More/)
 + less.js
   + version: 1.3.3
   + [lesscss.org](http://lesscss.org)
   
-  
+
+## References
+
++ [Style Tiles](http://styletil.es/)
++ [BBC Gel](http://www.bbc.co.uk/gel)
++ [vm/vh units](http://snook.ca/archives/html_and_css/vm-vh-units)
++ [Progressive JPEG](http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
+
 ## Notes
 
 ### Build
