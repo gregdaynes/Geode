@@ -2,7 +2,10 @@ Hammer Template
 ===============
 
 ## Todo
+  
 
+
+    
 ## Completed
 
 + clean-up build-script
@@ -40,6 +43,8 @@ Hammer Template
   + [Font Awesome More 3.0.2](http://gregoryloucas.github.com/Font-Awesome-More/)
 + [Bootstrap 2.3](http://twitter.github.com/bootstrap/)
   + update templates to reflect changes
++ Metadata Overhaul
++ Basic Twitter Card Support
 
 ## Libraries Included
 
@@ -50,7 +55,7 @@ Hammer Template
   + version: 2.6.2
   + [modernizr.com](http://modernizr.com)
 + Bootstrap
-  + version: 2.2.3
+  + version: 2.3.0
   + [getbootstrap.com](http://getbootstrap.com)
 + HTML5Boilerplate
   + version: 4.1.0
@@ -80,7 +85,13 @@ Hammer Template
   
 Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
 
+## Wireframe ToolKit
 
-### Card
+Ideas:
++ less mixin file
++ master class .wf
++ lorempixel mixins
 
-Not sure how I feel about Twitter's card api/rules. Not sure if I'll spend the time to create a template for it.
+
++ [blokkfont](http://blokkfont.com/)
++ [lorempixel.com](http://lorempixel.com/)
