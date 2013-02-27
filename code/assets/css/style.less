@@ -84,3 +84,18 @@
     content: "";
   }
 }
+
+
+
+::selection {
+  background: hsl(136,65%,45%);
+  color: white;
+}
+::selection:window-inactive {
+  background: hsl(136,25%,65%);
+}
+
+::-moz-selection {
+  background: rgba(255,0,0,0.9);
+  color: white;
+}

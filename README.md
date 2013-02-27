@@ -81,6 +81,13 @@ Hammer Template
 
 ## Notes
 
++ http://relogo.org/
++ http://www.jonathantneal.com/blog/understand-the-favicon/
+
+### Twitter Card
+
++ Images support a max of 750px x 560px
+
 ### Build
   
 Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
