@@ -2,10 +2,7 @@ Hammer Template
 ===============
 
 ## Todo
-  
 
-
-    
 ## Completed
 
 + clean-up build-script
@@ -45,6 +42,8 @@ Hammer Template
   + update templates to reflect changes
 + Metadata Overhaul
 + Basic Twitter Card Support
++ [Bootstrap 2.3.1](http://twitter.github.com/bootstrap/)
+  + updated bootstrap
 
 ## Libraries Included
 
@@ -55,7 +54,7 @@ Hammer Template
   + version: 2.6.2
   + [modernizr.com](http://modernizr.com)
 + Bootstrap
-  + version: 2.3.0
+  + version: 2.3.1
   + [getbootstrap.com](http://getbootstrap.com)
 + HTML5Boilerplate
   + version: 4.1.0
@@ -71,7 +70,6 @@ Hammer Template
   + version: 1.3.3
   + [lesscss.org](http://lesscss.org)
   
-
 ## References
 
 + [Style Tiles](http://styletil.es/)
@@ -98,7 +96,6 @@ Ideas:
 + less mixin file
 + master class .wf
 + lorempixel mixins
-
 
 + [blokkfont](http://blokkfont.com/)
 + [lorempixel.com](http://lorempixel.com/)
