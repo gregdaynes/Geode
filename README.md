@@ -44,6 +44,8 @@ Hammer Template
 + Basic Twitter Card Support
 + [Bootstrap 2.3.1](http://twitter.github.com/bootstrap/)
   + updated bootstrap
++ Removed Blokk + Wireframe
+  + Didn't use it, didn't like it.
 
 ## Libraries Included
 
@@ -89,13 +91,3 @@ Hammer Template
 ### Build
   
 Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
-
-## Wireframe ToolKit
-
-Ideas:
-+ less mixin file
-+ master class .wf
-+ lorempixel mixins
-
-+ [blokkfont](http://blokkfont.com/)
-+ [lorempixel.com](http://lorempixel.com/)
