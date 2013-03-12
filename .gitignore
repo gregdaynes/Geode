@@ -2,6 +2,7 @@
 Build/
 publish/
 resources/tmp/
+*.sublime*
 
 # OS generated files #
 ######################
