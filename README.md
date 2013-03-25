@@ -46,6 +46,9 @@ Hammer Template
   + updated bootstrap
 + Removed Blokk + Wireframe
   + Didn't use it, didn't like it.
++ Moved to SASS/SCSS
++ Removed less
++ new variables
 
 ## Libraries Included
 
@@ -61,16 +64,10 @@ Hammer Template
 + HTML5Boilerplate
   + version: 4.1.0
   + [html5boilerplate.com](http://html5boilerplate.com/)
-+ holder.js
-  + version: 1.9
-  + [github](http://imsky.github.com/holder/)
 + Font Awesome More
   + version: 3.0.2
   + [github](http://fortawesome.github.com/Font-Awesome/)
   + [more](http://gregoryloucas.github.com/Font-Awesome-More/)
-+ less.js
-  + version: 1.3.3
-  + [lesscss.org](http://lesscss.org)
   
 ## References
 
