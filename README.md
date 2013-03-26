@@ -3,7 +3,6 @@ Hammer Template
 
 ## Todo
 
-
 ## Libraries Included
 
 + jQuery
@@ -133,3 +132,4 @@ Choose either default or optimized script
 + optimized GA script
   + [link](http://mathiasbynens.be/notes/async-analytics-snippet)
 + added contact page
++ responsive helpers - change to fixed instead of absolute
