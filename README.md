@@ -32,6 +32,7 @@ Hammer Template
 + [Relogo](http://relogo.org/)
 + [Understanding the favicon](http://www.jonathantneal.com/blog/understand-the-favicon/)
 + [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
++ [hCard](http://microformats.org/wiki/hcard#Property_List)
 
 ## How-To
 
@@ -78,6 +79,10 @@ default license is Apache v2.0. http://www.apache.org/licenses/LICENSE-2.0
 ### Twitter Card
 
 Images support a max of 750px x 560x
+
+### Google Analytics
+
+Choose either default or optimized script
 
 ## Log
 
@@ -127,3 +132,4 @@ Images support a max of 750px x 560x
 + new variables
 + optimized GA script
   + [link](http://mathiasbynens.be/notes/async-analytics-snippet)
++ added contact page
