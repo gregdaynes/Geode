@@ -3,7 +3,82 @@ Hammer Template
 
 ## Todo
 
-## Completed
+
+## Libraries Included
+
++ jQuery
+  + version: 1.9.1
+  + [jquery.com](http://jquery.com)
++ Modernizr
+  + version: 2.6.2
+  + [modernizr.com](http://modernizr.com)
++ Bootstrap
+  + version: 2.3.1
+  + [getbootstrap.com](http://getbootstrap.com)
++ HTML5Boilerplate
+  + version: 4.1.0
+  + [html5boilerplate.com](http://html5boilerplate.com/)
++ Font Awesome More
+  + version: 3.0.2
+  + [github](http://fortawesome.github.com/Font-Awesome/)
+  + [more](http://gregoryloucas.github.com/Font-Awesome-More/)
+  
+## Notes & References
+
++ [Style Tiles](http://styletil.es/)
++ [BBC Gel](http://www.bbc.co.uk/gel)
++ [vm/vh units](http://snook.ca/archives/html_and_css/vm-vh-units)
++ [Progressive JPEG](http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
++ [Relogo](http://relogo.org/)
++ [Understanding the favicon](http://www.jonathantneal.com/blog/understand-the-favicon/)
+
+## How-To
+
+### Variables & customization
+
++ _variables.html
++ assets/css/_variables.scss
+
+### Bubbling query add to property in css
+
++ @include respond-to(size)
+  + handheld
+  + tablet
+  + desktop
+  + large-desktop
++ @include apply-to(retina)
+  + add 2x support to property
+  
+### Icons / Splash screens
+
++ splash-icon-sprites.psd
++ create each design in the space allocated
++ save for web - only user slices
+  + assets/img
+  
+### Custom OpenGraph image
+
+define $og_image after @include _variables.html
+
+<!-- $og_image assets/img/og-200x200.png -->
+
+### Build
+  
+Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
+
+### Sitemap
+
+Automatically generated using the build script
+
+### License
+
+default license is Apache v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+### Twitter Card
+
+Images support a max of 750px x 560x
+
+## Log
 
 + clean-up build-script
   + build to root for publish folder
@@ -49,42 +124,3 @@ Hammer Template
 + Moved to SASS/SCSS
 + Removed less
 + new variables
-
-## Libraries Included
-
-+ jQuery
-  + version: 1.9.1
-  + [jquery.com](http://jquery.com)
-+ Modernizr
-  + version: 2.6.2
-  + [modernizr.com](http://modernizr.com)
-+ Bootstrap
-  + version: 2.3.1
-  + [getbootstrap.com](http://getbootstrap.com)
-+ HTML5Boilerplate
-  + version: 4.1.0
-  + [html5boilerplate.com](http://html5boilerplate.com/)
-+ Font Awesome More
-  + version: 3.0.2
-  + [github](http://fortawesome.github.com/Font-Awesome/)
-  + [more](http://gregoryloucas.github.com/Font-Awesome-More/)
-  
-## References
-
-+ [Style Tiles](http://styletil.es/)
-+ [BBC Gel](http://www.bbc.co.uk/gel)
-+ [vm/vh units](http://snook.ca/archives/html_and_css/vm-vh-units)
-+ [Progressive JPEG](http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
-
-## Notes
-
-+ http://relogo.org/
-+ http://www.jonathantneal.com/blog/understand-the-favicon/
-
-### Twitter Card
-
-+ Images support a max of 750px x 560px
-
-### Build
-  
-Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
