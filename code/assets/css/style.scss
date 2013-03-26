@@ -1,15 +1,25 @@
+//
+// Variables
+// --------------------------------------------------
+@import "_variables"; // Modify this for custom colors, font-sizes, etc
+
+//
+// Includes
+// --------------------------------------------------
+
 @import "_lib/_library";
 @import "_lib/_media_queries";
-@import "_lib/_mixins.scss";
+@import "_lib/_mixins";
 
-// GLOBAL
-///////////////////////////////////
+//
+// Global
+// --------------------------------------------------
 
-// selections
-@include selection(hsl(136,65%,45%), white);
+// customize text selection colours
+@include selection($green, white);
 
 
-/**
- * Responsive Stuff
- */
+//
+// Responsive Stuff
+// --------------------------------------------------
 @import "_lib/_responsive";
