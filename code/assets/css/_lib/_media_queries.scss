@@ -1,0 +1,39 @@
+$bp1: 320px;
+$bp2: 480px;
+$bp3: 768px;
+$bp4: 979px;
+$bp5: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == handheld {
+    @media only screen and (max-width: $bp3 - 1) { @content; }
+  }
+
+  @if $media == tablet {
+    @media only screen and (min-width: $bp3) and (max-width: $bp4) { @content; }
+  }
+  
+  @if $media == desktop {
+    @media only screen and (min-width: $bp4) and (max-width: $bp5) { @content; }
+  }
+    
+  @else if $media == large-desktop {
+    @media only screen and (min-width: $bp5) { @content; }
+  }
+}
+
+@mixin apply-to($device) {
+  @if $device == handheld-portrait {
+    @media only screen and (max-width: $bp1) { @content; }
+  }
+  
+  @if $device == handheld-landscape {
+    @media only screen and (max-width: $bp2) { @content; }
+  }
+  
+  @if $device == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      @content;
+    }
+  }
+}

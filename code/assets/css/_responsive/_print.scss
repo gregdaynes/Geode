@@ -1,0 +1,8 @@
+// Print utilities
+.visible-print    { display: none !important; }
+.hidden-print     { }
+
+@media print {
+  .visible-print  { display: inherit !important; }
+  .hidden-print   { display: none !important; }
+}

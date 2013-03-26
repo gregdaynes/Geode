@@ -16,7 +16,8 @@
 
 # TECHNOLOGY
 
-    HTML5, CSS3
+    HTML5
+    CSS3
     jQuery
     Modernizr
     Bootstrap
@@ -24,3 +25,5 @@
     holder.js
     Font Awesome More
     relogo.org
+    Rock Hammer
+    

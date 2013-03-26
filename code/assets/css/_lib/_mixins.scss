@@ -1,0 +1,17 @@
+// SELECTION
+@mixin selection($color, $text) {
+  ::selection {
+    background: $color;
+    color: $text;
+  }
+  
+  ::selection:window-inactive {
+    // !important required
+    background: desaturate($color, 50%) !important;
+  }
+  
+  ::-moz-selection {
+    background: $color;
+    color: $text;
+  }
+}

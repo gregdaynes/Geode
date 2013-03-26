@@ -1,0 +1,24 @@
+// Utilities from H5BP
+
+// Image replacement
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+  
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+  
+  // Don't show links for images, or javascript/internal links
+  a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+}

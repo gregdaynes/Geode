@@ -1,0 +1,17 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@include respond-to(tablet) {
+
+  // Fixed grid
+  @include grid-core($gridColumnWidth768, $gridGutterWidth768);
+
+  // Fluid grid
+  @include grid-fluid($fluidGridColumnWidth768, $fluidGridGutterWidth768);
+
+  // Input grid
+  @include grid-input($gridColumnWidth768, $gridGutterWidth768);
+
+}

@@ -1,0 +1,99 @@
+/*!
+ *  Font Awesome More for IE7
+ *
+ */
+
+@mixin ie7icon($inner) {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '${inner}');
+}
+
+/* Social Extension */
+
+.icon-dropbox  							{ @include ie7icon('&#xf300;'); }
+.icon-drupal 								{ @include ie7icon('&#xf301;'); }
+.icon-git-fork 							{ @include ie7icon('&#xf302;'); }
+.icon-instagram 						{ @include ie7icon('&#xf303;'); }
+.icon-share-this-sign 			{ @include ie7icon('&#xf304;'); }
+.icon-share-this 						{ @include ie7icon('&#xf305;'); }
+.icon-foursquare-sign 			{ @include ie7icon('&#xf306;'); }
+.icon-foursquare 						{ @include ie7icon('&#xf307;'); }
+.icon-hacker-news 					{ @include ie7icon('&#xf308;'); }
+.icon-skype 								{ @include ie7icon('&#xf309;'); }
+.icon-spotify 							{	@include ie7icon('&#xf30a;'); }
+.icon-soundcloud 						{ @include ie7icon('&#xf30b;'); }
+.icon-paypal 								{ @include ie7icon('&#xf30c;'); }
+.icon-youtube-sign 					{	@include ie7icon('&#xf30d;'); }
+.icon-youtube 							{	@include ie7icon('&#xf30e;'); }
+.icon-reddit 								{ @include ie7icon('&#xf30f;'); }
+														
+.icon-blogger-sign 					{ @include ie7icon('&#xf310;'); }
+.icon-blogger 							{ @include ie7icon('&#xf311;'); }
+.icon-dribbble-sign 				{ @include ie7icon('&#xf312;'); }
+.icon-dribbble 							{ @include ie7icon('&#xf313;'); }
+.icon-evernote-sign 				{ @include ie7icon('&#xf314;'); }
+.icon-evernote 							{ @include ie7icon('&#xf315;'); }
+.icon-flickr-sign 					{	@include ie7icon('&#xf316;'); }
+.icon-flickr 								{ @include ie7icon('&#xf317;'); }
+.icon-forrst-sign 					{ @include ie7icon('&#xf318;'); }
+.icon-forrst 								{	@include ie7icon('&#xf319;'); }																
+.icon-delicious 						{ @include ie7icon('&#xf31a;'); }
+.icon-lastfm-sign 					{ @include ie7icon('&#xf31b;'); }
+.icon-lastfm 								{ @include ie7icon('&#xf31c;'); }
+.icon-picasa-sign 					{ @include ie7icon('&#xf31d;'); }
+.icon-picasa 								{ @include ie7icon('&#xf31e;'); }
+														
+.icon-stack-overflow 				{	@include ie7icon('&#xf320;'); }
+.icon-tumblr-sign 					{	@include ie7icon('&#xf321;'); }
+.icon-tumblr 								{	@include ie7icon('&#xf322;'); }
+.icon-vimeo-sign 						{	@include ie7icon('&#xf323;'); }
+.icon-vimeo 								{	@include ie7icon('&#xf324;'); }
+.icon-wordpress-sign 				{ @include ie7icon('&#xf325;'); }
+.icon-wordpress 						{	@include ie7icon('&#xf326;'); }
+.icon-yelp-sign 						{ @include ie7icon('&#xf327;'); }
+.icon-yelp 									{ @include ie7icon('&#xf328;'); }
+
+
+/* Corporate Extension */
+
+.icon-amazon-sign 					{ @include ie7icon('&#xf340;'); }
+.icon-amazon 								{	@include ie7icon('&#xf341;'); }
+.icon-android 							{ @include ie7icon('&#xf342;'); }
+.icon-apple-itunes 					{ @include ie7icon('&#xf343;'); }
+.icon-apple 								{	@include ie7icon('&#xf344;'); }
+.icon-aws 									{	@include ie7icon('&#xf345;'); }
+.icon-bing-sign 						{	@include ie7icon('&#xf346;'); }
+.icon-bing 									{	@include ie7icon('&#xf347;'); }
+.icon-duck-duck-go 					{	@include ie7icon('&#xf348;'); }
+.icon-google-sign 					{	@include ie7icon('&#xf349;'); }
+.icon-google 								{	@include ie7icon('&#xf34a;'); }
+.icon-sparrow-sign 					{	@include ie7icon('&#xf34b;'); }
+.icon-sparrow 							{	@include ie7icon('&#xf34c;'); }
+.icon-windows 							{	@include ie7icon('&#xf34d;');	}
+.icon-windows8 							{ @include ie7icon('&#xf34e;'); }
+.icon-yahoo 								{ @include ie7icon('&#xf34f;'); }
+
+
+/* More Extension */
+
+.icon-accessibility-sign 		{	@include ie7icon('&#xf200;'); }
+.icon-bike-sign 						{ @include ie7icon('&#xf201;'); }
+.icon-bus-sign 							{	@include ie7icon('&#xf202;'); }
+.icon-car-sign 							{	@include ie7icon('&#xf203;');	}
+.icon-taxi-sign 						{ @include ie7icon('&#xf204;'); }
+.icon-truck-sign 						{	@include ie7icon('&#xf205;');	}
+.icon-adobe-pdf 						{ @include ie7icon('&#xf206;'); }
+.icon-ms-excel 							{ @include ie7icon('&#xf207;'); }
+.icon-ms-ppt 								{ @include ie7icon('&#xf208;'); }
+.icon-ms-word 							{ @include ie7icon('&#xf209;'); }
+.icon-zip-file 							{ @include ie7icon('&#xf20a;'); }
+.icon-css3 									{	@include ie7icon('&#xf20b;'); }
+.icon-html5 								{ @include ie7icon('&#xf20c;'); }
+.icon-layers 								{ @include ie7icon('&#xf20d;'); }
+.icon-map 									{ @include ie7icon('&#xf20e;'); }
+
+.icon-chrome 								{ @include ie7icon('&#xf210;'); }
+.icon-firefox 							{ @include ie7icon('&#xf211;'); }
+.icon-ie 										{ @include ie7icon('&#xf212;'); }
+.icon-opera 								{ @include ie7icon('&#xf213;'); }
+.icon-safari 								{ @include ie7icon('&#xf214;'); }
+.icon-rss-sign 							{ @include ie7icon('&#xf215;'); }
