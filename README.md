@@ -31,6 +31,7 @@ Hammer Template
 + [Progressive JPEG](http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/)
 + [Relogo](http://relogo.org/)
 + [Understanding the favicon](http://www.jonathantneal.com/blog/understand-the-favicon/)
++ [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
 
 ## How-To
 
@@ -124,3 +125,5 @@ Images support a max of 750px x 560x
 + Moved to SASS/SCSS
 + Removed less
 + new variables
++ optimized GA script
+  + [link](http://mathiasbynens.be/notes/async-analytics-snippet)
