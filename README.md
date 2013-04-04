@@ -32,6 +32,7 @@ Hammer Template
 + [Understanding the favicon](http://www.jonathantneal.com/blog/understand-the-favicon/)
 + [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
 + [hCard](http://microformats.org/wiki/hcard#Property_List)
++ [tinypng](http://tinypng.org/)
 
 ## How-To
 
