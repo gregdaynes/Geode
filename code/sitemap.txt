@@ -1,4 +1,0 @@
-./code/build/404.html
-./code/build/index.html
-./code/build/privacy.html
-./code/build/tos.html

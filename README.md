@@ -1,27 +1,94 @@
-Hammer Template
-===============
+# Hammer Template
 
-## Todo
+Intro stuff
 
-## Libraries Included
+## 1: Setup
 
-+ jQuery
-  + version: 1.9.1
-  + [jquery.com](http://jquery.com)
-+ Modernizr
-  + version: 2.6.2
-  + [modernizr.com](http://modernizr.com)
-+ Bootstrap
-  + version: 2.3.1
-  + [getbootstrap.com](http://getbootstrap.com)
-+ HTML5Boilerplate
-  + version: 4.1.0
-  + [html5boilerplate.com](http://html5boilerplate.com/)
-+ Font Awesome More
-  + version: 3.0.2
-  + [github](http://fortawesome.github.com/Font-Awesome/)
-  + [more](http://gregoryloucas.github.com/Font-Awesome-More/)
+### Customize Settings
+
+#### _variables.html
+
+go through and update each of the variables to reflect the required information
+
++ version          : working version of the website
++ date             : last date of site update
++ siteName         : website name
++ siteNameShort    : websafe version of website name
++ siteColor        : color identity of site (primary color) for windows 8 tiles
++ siteUrl          : base url of website
++ siteUrlShort     : shorthand web url - if none, use site url
++ siteEmail        : contact email address
++ siteCreationDate : date site created
++ copyright        : Fill out copyright information
++ googleAnalytics  : add google analytics id
++ creator          : creator name
++ publisher        : creator/publisher's website
++ keywords         : keywords for the site
++ description      : description of the website
++ twitter          : twitter account for the website
+
+#### Google Analytics
+
+Choose whether or not you'd like to run the optimized GA script in the analytics file. [root]/_includes/_analytics.html
+
+Optimized version is set by default.
+
+#### sitemap
+
+1. navigate into [root]/_tools/sitemap
+2. edit sitemap.sh in your editor
+3. customize line 17 to your url. ie: SERVER="http://yourdomain.com"
+
+#### Ant
+
+feeling brave? customize the ant settings for your project
+ 
+[root]/_tools/ant-build/config/project.properties
   
+#### Humans.txt
+
+Don't forget to customize the humans.txt file. It's not necessary but still a nice thing to do.
+
+---
+
+## 2: Building
+
+Use Hammer as you would normally in your workflow. When you're ready to deploy, execute [root]/_tools/build.sh
+
+It will run apache Ant. The included script is customized from the HTML5 Boilerplate project. You can customize it to your needs, like adding in LESS support. For more information see the project on [GitHub](https://github.com/h5bp/ant-build-script)
+
+The build process will:
+
++ concatenate JS and CSS
++ minify JS and CSS
++ compress images (if available)
+
+This Ant script is compatible with the build in Hammer optimizer
+
+---
+
+## 3: Deploying
+
+After building you can upload the contents of the new publish folder to the server.
+
+---
+
+## Pages
+
+### Custom OpenGraph image
+
+define $og_image after @include _variables.html
+
+<!-- $og_image assets/img/og-200x200.png -->
+
+---
+
+## License
+
+default license is Apache v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+--- 
+
 ## Notes & References
 
 + [Style Tiles](http://styletil.es/)
@@ -34,103 +101,6 @@ Hammer Template
 + [hCard](http://microformats.org/wiki/hcard#Property_List)
 + [tinypng](http://tinypng.org/)
 
-## How-To
-
-### Variables & customization
-
-+ _variables.html
-+ assets/css/_variables.scss
-
-### Bubbling query add to property in css
-
-+ @include respond-to(size)
-  + handheld
-  + tablet
-  + desktop
-  + large-desktop
-+ @include apply-to(retina)
-  + add 2x support to property
-  
-### Icons / Splash screens
-
-+ splash-icon-sprites.psd
-+ create each design in the space allocated
-+ save for web - only user slices
-  + assets/img
-  
-### Custom OpenGraph image
-
-define $og_image after @include _variables.html
-
-<!-- $og_image assets/img/og-200x200.png -->
-
-### Build
-  
-Build script relies on Apache Ant - I don't have any tips for setting this up, but the Html5Boilerplate project has resources for this. 
-
-### Sitemap
-
-Automatically generated using the build script
-
-### License
-
-default license is Apache v2.0. http://www.apache.org/licenses/LICENSE-2.0
-
 ### Twitter Card
 
 Images support a max of 750px x 560x
-
-### Google Analytics
-
-Choose either default or optimized script
-
-## Log
-
-+ clean-up build-script
-  + build to root for publish folder
-  + build to resources for tmp folder
-  + exclude templates dir in final publish folder
-  + compile less to css and remove js
-+ add sprites-psd
-  + psd complete with named slices for outputting the different icons and splash screens
-+ add holder.js
-+ new templates
-  + add marketing template
-  + add carousel template
-  + add basic template
-  + add sticky footer template
-+ removed closing head tag from head.html
-  + this allows for adding page specific items to the head
-  + seen in the templates files
-+ add #footer to footer
-+ update lesscss to 1.3.3
-+ update font awesome more to 2.1
-+ split up includes folder
-  + Elements [header, footer, chrome frame, nav etc] are now in elements folder
-  + includes is mostly parts on every page
-+ [Better implementation of favicon/shortcut icon](http://www.jonathantneal.com/blog/understand-the-favicon/) 
-+ Windows 8 / IE10 Metro tile support
-  + tile color in variables, can be css, hex, or rgb()
-+ eval H5BP recent changes
-  + leaving HiDPI up to individual developers to implement
-  + [add .ir technique](https://github.com/h5bp/html5-boilerplate/issues/1239)
-+ [jQuery 1.9.1](http://jquery.com)
-+ [relogo](http://relogo.org/)
-+ [holder.js 1.9](http://imsky.github.com/holder/)
-+ [Font Awesome 3.0](http://fortawesome.github.com/Font-Awesome)
-  + [Font Awesome More 3.0.2](http://gregoryloucas.github.com/Font-Awesome-More/)
-+ [Bootstrap 2.3](http://twitter.github.com/bootstrap/)
-  + update templates to reflect changes
-+ Metadata Overhaul
-+ Basic Twitter Card Support
-+ [Bootstrap 2.3.1](http://twitter.github.com/bootstrap/)
-  + updated bootstrap
-+ Removed Blokk + Wireframe
-  + Didn't use it, didn't like it.
-+ Moved to SASS/SCSS
-+ Removed less
-+ new variables
-+ optimized GA script
-  + [link](http://mathiasbynens.be/notes/async-analytics-snippet)
-+ added contact page
-+ responsive helpers - change to fixed instead of absolute

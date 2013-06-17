@@ -1,0 +1,8 @@
+*.psd
+_resources/*
+_tools/*
+_tmp/*
+publish/*
+README.md
+template.txt
+LICENSE.md
