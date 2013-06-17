@@ -8,24 +8,6 @@
 // Created By: 
 // -----------------------------------------------------------------------------
 
-
-.wrapper {
-  @include outer-container;
-  
-  .alpha {
-    @include span-columns(6);
-  }
-  
-  .beta {
-    @include span-columns(5);
-  }
-  
-  .theta {
-    @include span-columns(1);
-  }
-}
-
-
 // -----------------------------------------------------------------------------
 // End of template
 //
