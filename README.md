@@ -77,7 +77,7 @@ After building you can upload the contents of the new publish folder to the serv
 
 ### Custom OpenGraph image
 
-define $og_image after @include _variables.html
+define $og_image after @include variables.html
 
 <!-- $og_image assets/img/og-200x200.png -->
 
