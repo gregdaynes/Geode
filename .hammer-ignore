@@ -1,8 +1,9 @@
 *.psd
 _resources/*
-_tools/*
-_tmp/*
-publish/*
+_partials/*
 README.md
 template.txt
 LICENSE.md
+node_modules/*
+Grunt.coffee
+package.json
