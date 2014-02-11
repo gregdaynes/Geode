@@ -1,8 +1,6 @@
 # Hammer Template
 
-Intro stuff
-
-## 1: Setup
+## Setup
 
 ### Customize Settings
 
@@ -32,44 +30,6 @@ go through and update each of the variables to reflect the required information
 Choose whether or not you'd like to run the optimized GA script in the analytics file. [root]/_includes/_analytics.html
 
 Optimized version is set by default.
-
-#### sitemap
-
-1. navigate into [root]/_tools/sitemap
-2. edit sitemap.sh in your editor
-3. customize line 17 to your url. ie: SERVER="http://yourdomain.com"
-
-#### Ant
-
-feeling brave? customize the ant settings for your project
- 
-[root]/_tools/ant-build/config/project.properties
-  
-#### Humans.txt
-
-Don't forget to customize the humans.txt file. It's not necessary but still a nice thing to do.
-
----
-
-## 2: Building
-
-Use Hammer as you would normally in your workflow. When you're ready to deploy, execute [root]/_tools/build.sh
-
-It will run apache Ant. The included script is customized from the HTML5 Boilerplate project. You can customize it to your needs, like adding in LESS support. For more information see the project on [GitHub](https://github.com/h5bp/ant-build-script)
-
-The build process will:
-
-+ concatenate JS and CSS
-+ minify JS and CSS
-+ compress images (if available)
-
-This Ant script is compatible with the build in Hammer optimizer
-
----
-
-## 3: Deploying
-
-After building you can upload the contents of the new publish folder to the server.
 
 ---
 
