@@ -3,3 +3,11 @@
 *:after {
   box-sizing:  border-box;
 }
+
+/**
+ * wrap elements in container
+ */
+%container {
+  margin: 0 auto;
+  width: 90%;
+}
