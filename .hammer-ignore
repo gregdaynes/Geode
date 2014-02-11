@@ -1,9 +1,8 @@
 *.psd
 _resources/*
-_partials/*
 README.md
 template.txt
 LICENSE.md
 node_modules/*
-Grunt.coffee
+Gruntfile.coffee
 package.json
