@@ -1,7 +1,7 @@
 {
-  "name":     "Hammer Template",
+  "siteName":     "Hammer Template",
   "language": "en-GB",
-  "id":       "hammer-template",
+  "name":       "hammer-template",
   "version":  "0.0.1",
   "license":  "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
   "color":    "#D83434",
