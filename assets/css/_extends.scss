@@ -1,0 +1,57 @@
+/* @group
+   -- $EXTENDS --                                                             */
+  // %ir - image replacement for text 
+  %ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  // %hide - hide element from screen 
+  %hide {
+    @extend %ir;
+    @extend %zero;
+    
+    height: 0;
+  }
+  
+  // %zero - remove padding & margin 
+  %zero {
+    margin: 0;
+    padding: 0;
+  }
+  
+  // %clean-list - remove list formatting 
+  %clean-list {
+    @extend %zero;
+    list-style: none;
+  }
+  
+  // %clearfix - clear floats 
+  %clearfix {
+    zoom:1;
+    &:before, &:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+  // %outline - outline element in red border 
+  %outline {
+    box-shadow: inset -1px -1px 0 red,
+                inset 1px 1px 0 red;
+  }
+  
+  // %container - responsive center aligned 
+  %container {
+    margin: 0 auto;
+    max-width: $size--max-width;
+    width: $size--width;
+  }
+  
+/* @end extend */

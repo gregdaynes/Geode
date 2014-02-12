@@ -1,0 +1,35 @@
+/* @group
+   -- $MIXINS --                                                              */
+   
+  // @mediaQuery - value, constraint, target
+  @mixin mediaQuery($unit, $first-query: min-width, $target: screen) {
+    
+    @debug $first-query;
+    
+    // Check if media queries are supported
+    @if $media-queries-supported == true {
+      @media #{$target} and (#{$first-query}: #{$unit}) {
+        @content;
+      }
+    }
+    @else {
+      #{$no-mq-classname} & {
+        @content;
+      }
+    }
+  }
+    
+  // @vertical-gradient - start, stop, direction
+  @mixin vertical-gradient($start: #fff, $stop: #000, $direction: to bottom)
+  {
+    background-color: $start;
+    background-image: linear-gradient($direction, $start, $stop);
+  }
+  
+  // @ir - image replacement (no args)
+  @mixin ir {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+/* @end mixins */
