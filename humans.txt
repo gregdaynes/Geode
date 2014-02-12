@@ -23,3 +23,9 @@
     HTML5Boilerplate
     relogo.org
     Hammer
+    
+# LIBRARIES
+    
+    Typecsset         -- github.com/csswizardry/typecsset | github.com/Cleecanth/typecsset
+    CSSWizardry-Grids -- github.com/csswizardry/csswizardry-grids | github.com/felics/csswizardry-grids
+    
