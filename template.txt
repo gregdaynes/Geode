@@ -1,2 +1,2 @@
 Author: Gregory Daynes
-Version: 1.3
+Version: 0.1.0
