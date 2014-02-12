@@ -1,30 +1,40 @@
 {
-  "siteName":     "Hammer Template",
-  "language": "en-GB",
-  "name":       "hammer-template",
-  "version":  "0.0.1",
-  "license":  "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
-  "color":    "#D83434",
-  "siteUrl":  "//hammer-template.com",
-  "siteUrlShort": "//hmrtmpl.com",
-  "authorEmail": "gregdaynes@gmail.com",
-  "siteEmail":   "site-contact@url.com",
+  "version":         "0.0.1",
+  "siteName":        "Hammer Template",
+  "name":            "hammer-template",
+  
+  "keywords":        "comma, separated, keywords",
+  "description":     "short description of website",
+  
+  "author":          "Gregory Daynes",
+  "publisher":       "//gregdaynes.github.io",
+  "twitter":         "@gregdaynes",
+  
+  "siteUrl":         "//hammer-template.com",
+  "siteUrlShort":    "//hmrtmpl.com",
+  "authorEmail":     "gregdaynes@gmail.com",
+  "siteEmail":       "site-contact@url.com",
   "googleAnalytics": "UA-XXXXXXXX-X",
-  "author": "Gregory Daynes",
-  "publisher": "//gregdaynes.github.io",
-  "keywords": "comma, separated, keywords",
-  "description": "short description of website",
-  "twitter": "@gregdaynes",
-  "copyright": "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
+  "color":           "#D83434",
+  
+  "copyright":       "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
+  
+  "language":        "en-GB",
+  "license":         "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
   
   "repository": {
     "type": "git",
-    "url": "https://github.com/gregdaynes/hammer-template"
+    "url":  "https://github.com/gregdaynes/hammer-template"
   },
+  
+  
     
   "bugs": {
     "url": "https://github.com/gregdaynes/hammer-template/issues"
   },
+  
+  
+  
   "devDependencies": {
     "load-grunt-tasks": "~0.3.0",
     "grunt": "~0.4.2",
@@ -33,4 +43,6 @@
     "grunt-replace": "~0.6.1",
     "grunt-contrib-watch": "~0.5.3"
   }
+  
+  
 }
