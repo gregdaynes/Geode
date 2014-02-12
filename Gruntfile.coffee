@@ -21,15 +21,16 @@ module.exports = (grunt) ->
         options:
           port: 8080
           base: '<%= globalConfig.root %>'
+          livereload: true
     
     replace:
       build:
         options: {
           patterns: [
             { match: 'date',     replacement: '<%= grunt.template.today() %>' },
-            { match: 'siteName',     replacement: '<%= pkg.name %>' },
+            { match: 'siteName',     replacement: '<%= pkg.siteName %>' },
             { match: 'language', replacement: '<%= pkg.language %>' },
-            { match: 'id',       replacement: '<%= pkg.id %>' },
+            { match: 'id',       replacement: '<%= pkg.name %>' },
             { match: 'version',  replacement: '<%= pkg.version %>' },
             { match: 'license',  replacement: '<%= pkg.license %>' },
             { match: 'siteColor', replacement: '<%= pkg.color %>' },
@@ -59,9 +60,14 @@ module.exports = (grunt) ->
         ]
           
     watch:
+      options:
+        livereload: true
       css:
         files: '<%= globalConfig.css %>'
         tasks: 'css'
+      replace:
+        files: '<%= globalConfig.root %>**/*.*'
+        tasks: 'replace'
         
   # !Load Tasks
   require("load-grunt-tasks") grunt
