@@ -6,3 +6,4 @@ LICENSE.md
 node_modules/*
 Gruntfile.coffee
 package.json
+assets/css/libraries/*
