@@ -1,9 +1,11 @@
 # Geode
+
 _formerly Hammer-Template_
 
 __Geode is a blank template for use with Hammer hammerformac.com__
 
 Working with _Geode_ is fast and easy.
+
 1. Create new Project
 2. Update variables
 3. Begin coding
@@ -12,7 +14,47 @@ Working with _Geode_ is fast and easy.
 
 
 
-## Ways to work with Geode
+Contents
+
+1. Introduction
+2. Contents
+3. How to install
+4. Ways to work with Geode
+  + Using Hammer
+  + Using Hammer and Grunt
+5. Variables
+6. Structure
+7. Classed Element Includes
+8. Development Map
+9. Issues & Feature Request
+10. Notes & References
+
+
+
+
+
+## 3. How to Install
+
+To get started adding _Geode_ to Hammer
+
+Navigate to [Geode releases on Github.com](https://github.com/gregdaynes/Geode/releases) 
+
+1. Download the latest .zip release from Github
+2. Rename the zip archive to .hammer
+  + Geode-0.1.0.zip -> Geode-0.1.0.hammer
+3. Double click to install
+4. Create new project in Hammer
+  + Select Geode as template
+5. Start coding
+
+
+
+
+
+
+
+
+## 4. Ways to work with Geode
 
 _Geode_ works as a standalone Hammer template, as well as works well with Grunt.
 
@@ -63,7 +105,7 @@ _As you edit the project, Hammer will build the files as normal, and Grunt will 
 
 
 
-## Variable Definitions
+## 5. Variable Definitions
 
 The following are the variables defined in _Geode_. They are found in two places. How you are working with _Geode_ will determine which variable file should be edited.
 
@@ -127,7 +169,7 @@ If you're working with Hammer and Grunt — you'll want to edit the package.json
 
 
 
-## Structure
+## 6. Structure
 
 The following is the files/directory structure of _Geode_
 
@@ -182,7 +224,7 @@ The following is the files/directory structure of _Geode_
     template.txt                 - document for Hammer template
     tos.html                     - Terms of service page
 
-## Reusable Includes with Classes
+## 7. Reusable Includes with Classes
 
 NOTE: __Experimental__
 
@@ -224,7 +266,31 @@ Any repeat include elements after the $elementVariable is defined, will continue
 
 
 
-## Notes & References
+## 8. Development Map
+
+_Geode_ is not under any scheduled development. It remains as a side project of @gregdaynes and as such is only worked on when time or resources permit.
+
+@todo
+
++ Geode example icons and startup images
++ More default elements
++ More default blocks
++ Additional SCSS extends, mixing, functions
+
+
+
+
+
+## 9. Issues & Feature Requests
+
+Use Github to report issues and feature requests
+https://github.com/gregdaynes/Geode/issues
+
+
+
+
+
+## 10. Notes & References
 
 + [Style Tiles](http://styletil.es/)
 + [BBC Gel](http://www.bbc.co.uk/gel)
