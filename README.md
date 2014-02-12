@@ -65,40 +65,164 @@ _As you edit the project, Hammer will build the files as normal, and Grunt will 
 
 ## Variable Definitions
 
-* $version | version
-  * Working version of the website
-* $siteName
-  * Website name
-* $name
-  * Websafe version of website name
-    * Fun Site Name -> "fun-site-name"
+The following are the variables defined in _Geode_. They are found in two places. How you are working with _Geode_ will determine which variable file should be edited.
 
-+ date             : last date of site update
-+ siteName         : website name
-+ siteNameShort    : websafe version of website name
-+ siteColor        : color identity of site (primary color) for windows 8 tiles
-+ siteUrl          : base url of website
-+ siteUrlShort     : shorthand web url - if none, use site url
-+ siteEmail        : contact email address
-+ siteCreationDate : date site created
-+ copyright        : Fill out copyright information
-+ googleAnalytics  : add google analytics id
-+ creator          : creator name
-+ publisher        : creator/publisher's website
-+ keywords         : keywords for the site
-+ description      : description of the website
-+ twitter          : twitter account for the website
+If you're working with just Hammer — you'll want to edit the _variables.html file found in the _partials directory.
+
+If you're working with Hammer and Grunt — you'll want to edit the package.json file found in the root directory of _Geode_
+
+1. $version
+  - Working version of the website
+2. $siteName | siteName
+  - Website name
+3. $name
+  - Websafe version of website name
+    - e.g. Fun Site Name -> "fun-site-name"
+
+4. $keywords
+  - Comma separated keywords for the site
+  - Treat these as <meta> keywords
+5. $description
+  - Short description of the website
+  - Treat this as <meta> description
+
+6. $publisher
+  - Name or url to the publisher's website
+7. $twitter
+  - Website's twitter account
+
+8. $siteUrl
+  - URL for the website
+9. $siteUrlShort
+  - Shortened url for the website
+  - if you have a custom short domain or use a service like bit.ly
+10. $siteEmail
+  - Website's contact email address
+11. $siteAnalytics
+  - Google Analytics ID
+    - This may in the future expand to be a multitude of analytics services
+12. $siteColor
+  - Colour of the website.
+    - Used for Windows 8 tiles
+
+13. $copyright
+  - Copyright information for the website
+14. $language
+  - Language encoding of the website
+    - e.g. en-GB
+15. $license
+  - License to use for website
+16. $creatorName
+  - Name of the creator of the site
+17. $creatorTwitter
+  - Twitter account of the creator
+18. $twitterCard
+  - Twitter card type - Summary, Photo, Gallery, App, Player, Product
+    - Can just be left as summary
+19. $date
+  - Change to adjust the created dates
+  - If using Grunt - leave as is - this will be automatically generated
 
 
-## Pages
 
-### Custom OpenGraph image
 
-define $og_image after @include variables.html
 
-<!-- $og_image assets/img/og-200x200.png -->
+## Structure
 
----
+The following is the files/directory structure of _Geode_
+
+    _partials/                   - bits and pieces of the project
+      _analytics.html            - website analytics include
+      _scripts.html              - javascripts at the end of the page
+      _variables.html            - variables file — edit if using just Hammer
+      block/                     - block items — ie header, footer
+        _footer.html             -
+        _header.html             -
+      element/                   - contains individual elements — ie Navigation
+        _nav.html                - example navigation module
+     head/                       - files relevant to <head>
+        _graph.html              - meta tags for social media graph information
+        _head.html               - the meat of <head> 
+        _head.mobile.html        - mobile data and tags
+        _ie.html                 - Internet Explorer conditional file
+      utility/                   - useful miscellaneous files
+        _conditional.html        - <html> conditionals
+        _license.html            - license, version, creator information
+    _resources/                  - useful templates not used directly in _Geode_
+      graph-images.psd           - template for creating various social media images
+      splash-icon-sprites.psd    - template for creating iOS icons as well as startup images
+      Style-tile.psd             - Photoshop version style tile 
+      style-tile.sketch          - Sketch version style tile
+    .hammer-ignore               - tells hammer which files/folders to ignore
+    404.html                     - 404 error page — File not found
+    assets/                      - contains all the page assets — CSS, JS, Images
+      css/                       - scss/css files for the project
+        _extends.scss            - scss silent extends
+        _functions.scss          - scss functions
+        _mixins.scss             - scss mixins
+        libraries/               - libraries used in _Geode_
+          csswizardry-grids/     - grid library for layout
+          typecsset/             - baseline grid for typography
+        style-ie8.scss           - ie8 (6 & 7) specific stylesheet
+        style.scss               - _Geode_ main stylesheet
+      img/                       - contains images for _Geode_
+      js/                        - contains javascript/coffescript
+        console.coffee           - coffescript for browsers that don't support console.log()
+    crossdomain.xml              - Crossdomain access rights
+    favicon.ico                  - Website favicon — in splash-icon-sprites.psd
+    Gruntfile.coffee             - Grunt build file
+    humans.txt                   - Humans.txt credit file
+    index.html                   - Home page, show's basic _Geode_ layout
+    LICENSE.md                   - _Geode_ license
+    logo.svg                     - Website logo as SVG — used for Relogo
+    package.json                 - Node/NPM package data — Contains variables for Grunt
+    privacy.html                 - Privacy policy page
+    README.md                    - This document
+    robots.txt                   - Robots follow/nofollow rules
+    template.txt                 - document for Hammer template
+    tos.html                     - Terms of service page
+
+## Reusable Includes with Classes
+
+NOTE: __Experimental__
+
+_partials > elements > _nav.html demonstrates a simple way of using Hammer variables and classes to namespace a reusable Hammer Include.
+
+the <nav> element was given a class with a defined Hammer Variable including a default.
+
+Defining the $elementVariable immediately before adding the Hammer Include, will apply the variable to the element.
+
+    <!-- @include nav -->
+    - Builds as -
+    <nav class="navigation-element"></nav>
+
+    <!-- $elementNavigation classed-nav -->
+    <!-- @include nav -->
+    - Builds as -
+    <nav class="classed-nav"></nav>
+  
+Any repeat include elements after the $elementVariable is defined, will continue to use $elementVariable until it is redefined again.
+    
+    <!-- $elementNavigation header-nav -->
+    <!-- @include nav -->
+    <!-- @include nav -->
+    - Builds as -
+    <nav class="header-nav"></nav>
+    <nav class="header-nav"></nav>
+
+    <!-- $elementNavigation header-nav -->
+    <!-- @include nav -->
+
+    <!-- $elementNavigation footer-nav -->
+    <!-- @include nav -->
+    - Builds as -
+    <nav class="header-nav"></nav>
+
+    <nav class="footer-nav"></nav>
+
+
+
+
 
 ## Notes & References
 
@@ -111,7 +235,3 @@ define $og_image after @include variables.html
 + [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
 + [hCard](http://microformats.org/wiki/hcard#Property_List)
 + [tinypng](http://tinypng.org/)
-
-### Twitter Card
-
-Images support a max of 750px x 560x
