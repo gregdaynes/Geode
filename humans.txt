@@ -12,17 +12,23 @@
 
 # THANKS
 
-    <name>
+    Riot -- @riothq
+    
+    Andrew Clarke -- @malarky
 
 # TECHNOLOGY
 
     HTML5
     CSS3
+    Coffeescript
     jQuery
     Modernizr
     HTML5Boilerplate
     relogo.org
-    Hammer
+    Hammer -- @hammerformac
+    Grunt
+    Github
+    
     
 # LIBRARIES
     
