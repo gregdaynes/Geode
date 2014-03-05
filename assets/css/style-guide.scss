@@ -1,0 +1,36 @@
+@import "style";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+
+
+.grid-example {
+  @extend %grid;
+
+  div {
+    @extend %grid__item;
+    background-color: $color--gray-lighter;
+  }
+
+  .one-whole { @extend %one-whole; }
+  .one-half  { @extend %one-half; }
+  .one-third { @extend %one-third; }
+  .one-quarter { @extend %one-quarter; }
+  .one-fifth { @extend %one-fifth; }
+  .one-sixth { @extend %one-sixth; }
+
+  .two-thirds { @extend %two-thirds; }
+  .three-quarters { @extend %three-quarters; }
+  .two-fifths { @extend %two-fifths; }
+  .three-fifths { @extend %three-fifths; }
+  .four-fifths { @extend %four-fifths; }
+  .five-sixths { @extend %five-sixths; }
+}
