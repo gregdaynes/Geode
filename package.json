@@ -1,7 +1,7 @@
 {
   "version":         "0.0.1",
-  "siteName":        "Hammer Template",
-  "name":            "hammer-template",
+  "siteName":        "Geode",
+  "name":            "geode",
   "keywords":        "comma, separated, keywords",
   "description":     "short description of website",
   "publisher":       "//gregdaynes.github.io",
@@ -11,27 +11,27 @@
   "siteEmail":       "site-contact@url.com",
   "siteAnalytics":   "UA-XXXXXXXX-X",
   "siteColor":       "#D83434",
-  "copyright":       "Copyright (C) 2014 Gregory Daynes. All rights reserved.",  
+  "copyright":       "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
   "language":        "en-GB",
   "license":         "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
   "creatorName":     "Gregory Daynes",
   "creatorTwitter":  "@gregdaynes",
   "twitterCard":     "summary",
-  
-  
+
+
   "repository": {
     "type": "git",
     "url":  "https://github.com/gregdaynes/hammer-template"
   },
-  
-  
-    
+
+
+
   "bugs": {
     "url": "https://github.com/gregdaynes/hammer-template/issues"
   },
-  
-  
-  
+
+
+
   "devDependencies": {
     "load-grunt-tasks": "~0.4.0",
     "grunt": "~0.4.2",
@@ -40,6 +40,6 @@
     "grunt-replace": "~0.6.2",
     "grunt-contrib-watch": "~0.5.3"
   }
-  
-  
+
+
 }
