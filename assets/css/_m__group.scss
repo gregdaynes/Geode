@@ -1,0 +1,75 @@
+/**
+ * Group
+
+    <div class="group">
+
+    <h2 class="group__title">Smokin' Hot</h2>
+
+    <div class="group-grid">
+      <ul class="group-grid__header">
+        <li class="group-grid__item--name">Golfer</li>
+        <li class="group-grid__item--last-tournaments">Last 3 Tournaments</li>
+        <li class="group-grid__item--last-majors">Last 3 Majors</li>
+        <li class="group-grid__item--last-championship">Last 2 PGA Championships</li>
+      </ul>
+
+    </div>
+    </div>
+ */
+
+.group {
+  border: 1px solid $color--gray-lighter;
+  border-radius: 3px;
+}
+
+.group__title {
+  margin: 0;
+  padding: $gutter--narrow;
+/*   background-color: lighten($color--gray-lighter, 2%); */
+}
+
+.group-grid {
+
+}
+
+.group-grid__header {
+  @extend %grid--full;
+  @extend %palm--one-whole;
+
+  @include typecsset-font-size($type--small);
+
+  margin-bottom: 0;
+  border-bottom: 1px solid $color--gray-lighter;
+
+  @include vertical-gradient($color--white, $color--gray-lighter);
+}
+
+.group-grid__item {
+  @extend %grid__item;
+  @extend %lap--one-quarter;
+
+  text-align: center;
+  border-left: 1px solid $color--gray-lighter;
+
+  @include mediaQuery($lap, max-width) {
+    display: none;
+  }
+}
+
+.group-grid__item--name {
+  @extend .group-grid__item;
+
+  border-left: none;
+}
+
+.group-grid__item--last-tournaments {
+  @extend .group-grid__item;
+}
+
+.group-grid__item--last-majors {
+  @extend .group-grid__item;
+}
+
+.group-grid__item--last-championship {
+  @extend .group-grid__item;
+}

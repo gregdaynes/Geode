@@ -2,11 +2,11 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-    
+
     globalConfig:
       root: 'Build/'
       css:  'Build/assets/css'
-    
+
     autoprefixer:
       options:
         browsers: ['last 2 version', 'ie 9', '> 1%']
@@ -15,14 +15,15 @@ module.exports = (grunt) ->
         cwd: '<%= globalConfig.css %>'
         src: '**/*.css'
         dest: '<%= globalConfig.css %>'
-    
+
     connect:
       server:
         options:
           port: 8080
           base: '<%= globalConfig.root %>'
           livereload: true
-    
+          hostname: 'localhost'
+
     replace:
       build:
         options: {
@@ -58,7 +59,7 @@ module.exports = (grunt) ->
             dest: '<%= globalConfig.root %>',
           }
         ]
-          
+
     watch:
       options:
         livereload: true
@@ -68,20 +69,20 @@ module.exports = (grunt) ->
       replace:
         files: '<%= globalConfig.root %>**/*.*'
         tasks: 'replace'
-        
+
   # !Load Tasks
   require("load-grunt-tasks") grunt
-  
+
   grunt.registerTask 'css', [
     'autoprefixer'
   ]
-  
+
   grunt.registerTask 'default', [
     'css'
-    
+
     'replace'
-    
+
     'connect'
-    
+
     'watch'
   ]

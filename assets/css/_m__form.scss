@@ -1,0 +1,110 @@
+/**
+ * CONTACT FORM
+
+    <div class="entry-form">
+      <h2 class="entry-form__title">Contact Information</h2>
+
+      <form class="entry-form__form" id="entry-form">
+        <label class="entry-form__label--email" for="entry-form__email">Email Address</label>
+        <input class="entry-form__email" id="entry-form__email" name="entry-form__email" type="email">
+
+        <input class="entry-form__newsletter" id="entry-form__newsletter" name="entry-form__newsletter" type="checkbox">
+        <label class="entry-form__label--newsletter" for="entry-form__newsletter">Sign Me Up</label>
+
+        <button class="entry-form__button" type="submit">Enter the Picking the Majors Contest</button>
+      </form>
+    </div>
+ */
+
+.entry-form {
+  border-radius: 3px;
+  background-color: $color--gray-lighter;
+  padding: $gutter--narrow;
+  margin: $gutter--normal 0;
+}
+
+.entry-form__title {
+
+}
+
+.entry-form__form {
+  text-align: center;
+}
+
+.entry-form__label {
+  display: block;
+  margin-top: $gutter--normal;
+
+  &:after {
+    content: ':';
+  }
+}
+
+.entry-form__email-wrapper {
+
+  width: 100%;
+  margin: 0 auto;
+
+  @include mediaQuery($lap) {
+    width: 512px;
+    max-width: 100%;
+  }
+}
+
+.entry-form__email {
+  padding: $gutter--skinny $gutter--skinny;
+  width: 100%;
+
+  @include typecsset-font-size($type--base);
+}
+
+.entry-form__newsletter {
+
+}
+
+.entry-form__button {
+  display: block;
+  text-align: center;
+  margin: $gutter--normal auto $gutter--narrow;
+  color: $color--white;
+  border: none;
+  padding: $gutter--skinny $gutter--narrow;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3),
+        inset 0 1px 0   rgba(255,255,255,0.3),
+        inset 0 -1px 0  rgba(0,0,0,0.1);
+
+  @include vertical-gradient($color--primary, darken($color--primary, 5%));
+
+  &:hover,
+  &:focus {
+    background-image: none;
+    background-color: $color--red;
+    outline: none;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.3),
+                inset 0 -1px 0 rgba(255,255,255,0.3);
+
+    @include vertical-gradient(darken($color--primary, 5%), $color--primary);
+  }
+}
+
+.entry-form__label--newsletter {
+  @extend .entry-form__label;
+  display: inline-block;
+}
+
+.entry-form__label--email {
+  @extend .entry-form__label;
+  text-align: left;
+}

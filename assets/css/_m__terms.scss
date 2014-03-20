@@ -1,0 +1,87 @@
+/**
+ * TERMS
+
+    <div class="terms">
+      <h2 class="terms__title">Terms &amp; Conditions</h2>
+
+      <article class="terms__content">
+        <h3>Overall Contest Rules</h3>
+
+        <p>In the two weeks leading up to each Major, contestants can enter by picking players from the field for that event.
+
+
+        <dl>
+          <dt>Participants do not have to purchase any merchandise from:</dt>
+          <dd>
+            <ul>
+              <li>Inside Golf Inc.</li>
+              <li>Nike Golf Canada ("Nike Golf")</li>
+            </ul>
+            to participate or to win. Void where prohibited by law. Subject to all federal, provincial and municipal laws and regulations.
+          </dd>
+        </dl>
+
+      </article>
+
+      <span class="agree-form">
+        <input type="checkbox" form="entry-form" id="agree" name="agree">
+        <label class="entry-form__label--agree" for="agree">I Agree to these Terms &amp; Conditions</label>
+      </span>
+    </div>
+ */
+
+.terms {
+  background-color: $color--gray-lighter;
+  border-radius: 3px;
+}
+
+.terms__title {
+  margin: 0;
+  padding: $gutter--narrow;
+}
+
+.terms__content {
+  overflow: scroll;
+  border: 1px solid $color--gray-light;
+  height: 350px;
+  padding: $gutter--narrow;
+  background-color: $color--white;
+  margin: 0 $gutter--narrow;
+
+  @include typecsset-font-size($type--small);
+
+  h3 {
+    text-transform: uppercase;
+
+    @include typecsset-font-size($type--base);
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: $gutter--skinny / 2 0;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  dt {
+
+  }
+
+  dd {
+    margin-left: $gutter--narrow;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: $gutter--narrow;
+  }
+}
+
+.agree-form {
+  text-align: right;
+  display: block;
+  padding: $gutter--narrow;
+
+}
