@@ -1,0 +1,2 @@
+Author: Gregory Daynes
+Version: 0.1.0

@@ -1,4 +1,4 @@
-// $CONTENTS
+// $CONTENTS                                                            
 /* -- CONTENTS............You’re reading it!         */
 /* -- FLAGS...............Configure options          */
 /* -- FUNCTIONS...........Functions for calculations */
@@ -15,7 +15,7 @@
 
 
 
-// $FLAGS
+// $FLAGS   
 /* -- browser with Media Query support */
 $media-queries-supported: true !default;
 $no-mq-classname: '.no-mediaquery';
@@ -70,17 +70,12 @@ $color--gray:          #555;
 $color--gray-light:   #999;
 $color--gray-lighter: #eee;
 $color--white:        #fff;
-
-$color--selected: $color--red;
-$color--hover:    transparentize($color--red, 0.8);
-$color--primary: $color--red;
-$color--secondary: $color--gray-light;
-
+  
 /* -- Gutters */
 $gutter--normal: 24px;
 $gutter--narrow: 12px;
 $gutter--skinny: 6px;
-
+ 
 /* -- Typography */
 $type--micro:  7px;
 $type--tiny:   9px;
@@ -104,7 +99,7 @@ $desk:     em(1024.1px);
 /* -- Libraries  */
 /* ---- Typecsset */
 $typecsset-base-font-size:    $type--base;
-$typecsset-base-line-height:  21px;
+$typecsset-base-line-height:  32px;
 $typecsset-show-baseline:     false;
 
 /* ---- Grids */
@@ -112,12 +107,12 @@ $grid__gutter:                $gutter--normal;
 $grid__responsive:            true;
 $grid__mobile-first:          true;
 $grid__use-silent-classes:    true;
-$grid__push:                  true;
-$grid__pull:                  true;
+$grid__push:                  false;
+$grid__pull:                  false;
 $grid__use-markup-fix:        true;
 $grid__breakpoints: (
-  'palm' '(min-width: #{$palm})',
-  'lap' '(min-width: #{$lap})',
+  'palm' '(max-width: #{$palm})',
+  'lap' '(min-width: #{$lap}) and (max-width: #{$portable})',
   'portable' '(max-width: #{$portable})',
   'desk' '(min-width: #{$desk})'
 );
@@ -243,13 +238,8 @@ a {
   }
 }
 
-h2 {
-  text-align: center;
 
-  @include mediaQuery($lap) {
-    text-align: left;
-  }
-}
+
 
 
 // $GRIDS
@@ -259,61 +249,9 @@ h2 {
 
 
 // $LAYOUT
-body {
-  padding: $typecsset-base-line-height $gutter--normal;
-  margin: 0 auto;
-}
 
-
-.button {
-  display: block;
-  text-align: center;
-  color: $color--white;
-  border: none;
-  padding: $gutter--skinny $gutter--narrow;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3),
-        inset 0 1px 0   rgba(255,255,255,0.3),
-        inset 0 -1px 0  rgba(0,0,0,0.1);
-
-  @include vertical-gradient($color--primary, darken($color--primary, 5%));
-
-  &:hover,
-  &:focus {
-    background-image: none;
-    background-color: $color--red;
-    outline: none;
-  }
-
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &:hover:focus {
-    text-decoration: none;
-  }
-
-  &:active {
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.3),
-                inset 0 -1px 0 rgba(255,255,255,0.3);
-
-    @include vertical-gradient(darken($color--primary, 5%), $color--primary);
-  }
-}
 
 
 
 
 // $MODULES
-@import "m__header";
-@import "m__rules";
-@import "m__group";
-@import "m__golfer";
-@import "m__flags";
-@import "m__selected";
-@import "m__terms";
-@import "m__form";
-@import "m__thank-you";
-@import "m__nav";
-@import "m__footer";
-

@@ -1,7 +1,7 @@
 {
   "version":         "0.0.1",
-  "siteName":        "Picking the Majors",
-  "name":            "pitm",
+  "siteName":        "Geode",
+  "name":            "geode",
   "keywords":        "comma, separated, keywords",
   "description":     "short description of website",
   "publisher":       "//gregdaynes.github.io",
@@ -11,7 +11,7 @@
   "siteEmail":       "site-contact@url.com",
   "siteAnalytics":   "UA-XXXXXXXX-X",
   "siteColor":       "#D83434",
-  "copyright":       "Copyright (C) 2014 iG Design & Publishing. All rights reserved.",
+  "copyright":       "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
   "language":        "en-GB",
   "license":         "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
   "creatorName":     "Gregory Daynes",
@@ -34,10 +34,12 @@
 
   "devDependencies": {
     "load-grunt-tasks": "~0.4.0",
-    "grunt": "~0.4.4",
+    "grunt": "~0.4.2",
     "grunt-contrib-connect": "~0.7.1",
     "grunt-autoprefixer": "~0.7.2",
-    "grunt-replace": "~0.7.3",
-    "grunt-contrib-watch": "~0.6.0"
+    "grunt-replace": "~0.6.2",
+    "grunt-contrib-watch": "~0.5.3"
   }
+
+
 }
