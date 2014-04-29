@@ -1,0 +1,230 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700|Merriweather);
+
+%measure {
+  width: 100%;
+  max-width: $size--measure;
+}
+
+%font-body {
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+}
+
+%font-heading {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+
+body {
+  @extend %font-body;
+
+  margin: 0 auto;
+  font-size:100%;
+  line-height:1.5;
+
+  @include mediaQuery($lap, max-width) {
+    font-size: 90%;
+  }
+}
+
+blockquote {
+  @extend %measure;
+
+  position: relative;
+  margin-left: 0;
+  text-align: justify;
+
+  @include mediaQuery($lap) {
+    margin-left: 3em;
+  }
+
+  &:before,
+  &:after {
+    height: 1em;
+    position: absolute;
+    z-index: -1;
+    font-size: 400%;
+    display: block;
+    color: $color--gray-lighter;
+  }
+
+  &:before {
+    content: '“';
+    top: -.35em;
+    left: 0;
+
+    @include mediaQuery($lap) {
+      left: -.65em;
+    }
+  }
+
+  &:after {
+    right: 0;
+    bottom: -.5em;
+    content: '”';
+
+    @include mediaQuery($lap) {
+      right: -.65em;
+    }
+  }
+}
+
+blockquote + figcaption {
+  @include mediaQuery($lap) {
+    margin-left: 3.6em;
+  }
+}
+
+figcaption {
+  color: $color--gray-light;
+  font-size: 80%;
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
+}
+
+mark {
+  background-color: transparentize($color--yellow, .6);
+  position: relative;
+
+
+  &:after,
+  &:before {
+    background-color: transparentize($color--yellow, .6);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $gutter--skinny;
+    z-index: -1;
+    content: '';
+  }
+
+  &:before {
+    left: -$gutter--skinny;
+  }
+
+  &:after {
+    right: -$gutter--skinny;
+  }
+}
+
+ul,
+ol {
+  @extend %measure;
+  padding-left: $gutter--normal;
+  list-style-position: outside;
+  @include mediaQuery($lap) {
+    padding-left: $gutter--normal;
+  }
+}
+
+dl {
+  @extend %measure;
+}
+
+dt {
+
+}
+
+dd {
+  margin-left: $gutter--narrow;
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+td,
+th {
+  border: 1px solid $color--black;
+  padding: $gutter--skinny $gutter--narrow;
+}
+
+th {
+  @extend %font-heading;
+  background-color: $color--gray-lighter;
+  font-weight: bold;
+
+}
+
+p {
+  @extend %measure;
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-heading;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+
+  span {
+    @extend %font-body;
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+  }
+}
+
+a {
+  color: $color--blue;
+
+  &:hover,
+  &:focus {
+    color: $color--aqua;
+  }
+
+  &:active {
+    color: $color--navy;
+  }
+}
+
+
+h1 {
+  font-size: 2.747em;
+  line-height:1.1;
+
+  span:nth-of-type(1) {
+    font-size:0.63em;
+    display:block;
+    margin: 1em auto 0 auto;
+  }
+}
+
+
+h2 {
+  font-size: .874em;
+  line-height:1;
+  margin-top:1.953em;
+
+  span {
+    display:block;
+    padding: $gutter--skinny 0;
+/*     position:relative; */
+/*     top:-.45em; */
+/*     padding: 0 5%; */
+/*     margin-top:-1em; */
+  }
+}
+
+
+h3,
+table caption {
+  font-style: italic;
+  font-weight:700;
+  font-size:1.229em;
+  margin:1em 0 .25em 0;
+}
+

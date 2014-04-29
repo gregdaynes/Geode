@@ -1,4 +1,4 @@
-// $CONTENTS                                                            
+// $CONTENTS
 /* -- CONTENTS............You’re reading it!         */
 /* -- FLAGS...............Configure options          */
 /* -- FUNCTIONS...........Functions for calculations */
@@ -15,7 +15,7 @@
 
 
 
-// $FLAGS   
+// $FLAGS
 /* -- browser with Media Query support */
 $media-queries-supported: true !default;
 $no-mq-classname: '.no-mediaquery';
@@ -70,12 +70,12 @@ $color--gray:          #555;
 $color--gray-light:   #999;
 $color--gray-lighter: #eee;
 $color--white:        #fff;
-  
+
 /* -- Gutters */
 $gutter--normal: 24px;
 $gutter--narrow: 12px;
 $gutter--skinny: 6px;
- 
+
 /* -- Typography */
 $type--micro:  7px;
 $type--tiny:   9px;
@@ -89,10 +89,11 @@ $size--touch-target: 44px;
 $size--menu-width: 90%;
 $size--max-width: 960px;
 $size--width: 90%;
+$size--measure: 35em;
 
 /* -- Breakpoints */
 $palm:     em(300px);
-$lap:      em(480.1px);
+$lap:      em(768px);
 $portable: em(1024px);
 $desk:     em(1024.1px);
 
@@ -149,10 +150,10 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 
 // $IMPORTS
-@import "typecsset.scss";
+/* @import "typecsset.scss"; */
 @import "csswizardry-grids.scss";
-@import "//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css";
-
+/* @import "//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css"; */
+@import "reset";
 
 
 
@@ -171,72 +172,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 
 // $TYPOGRAPHY
-body {
-  font-weight: 200;
-}
-
-blockquote {
-  padding-left: 20px;
-  position: relative;
-  margin-left: 0;
-
-  &:before,
-  &:after {
-    content: '';
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    z-index: -1;
-  }
-
-  &:before {
-    background-color: green;
-    top: 0;
-    left: 0;
-  }
-
-  &:after {
-    background-color: red;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-ul,
-ol {
-  margin-left: $gutter--normal;
-  list-style-position: outside;
-}
-
-table {
-  border-collapse: collapse;
-}
-td,
-th {
-  border: 1px solid $color--black;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-}
-
-a {
-  color: $color--blue;
-
-  &:hover,
-  &:focus {
-    color: $color--aqua;
-  }
-
-  &:active {
-    color: $color--navy;
-  }
-}
+@import "typography";
 
 
 
