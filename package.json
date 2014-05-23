@@ -1,45 +1,38 @@
 {
-  "version":         "0.0.1",
-  "siteName":        "Geode",
-  "name":            "geode",
-  "keywords":        "comma, separated, keywords",
-  "description":     "short description of website",
-  "publisher":       "//gregdaynes.github.io",
-  "twitter":         "@gregdaynes",
-  "siteUrl":         "//hammer-template.com",
-  "siteUrlShort":    "//hmrtmpl.com",
-  "siteEmail":       "site-contact@url.com",
-  "siteAnalytics":   "UA-XXXXXXXX-X",
-  "siteColor":       "#D83434",
-  "copyright":       "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
-  "language":        "en-GB",
-  "license":         "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
-  "creatorName":     "Gregory Daynes",
-  "creatorTwitter":  "@gregdaynes",
-  "twitterCard":     "summary",
-
-
+  "version": "0.0.1",
+  "siteName": "Geode",
+  "name": "geode",
+  "keywords": "comma, separated, keywords",
+  "description": "short description of website",
+  "publisher": "//gregdaynes.github.io",
+  "twitter": "@gregdaynes",
+  "siteUrl": "//hammer-template.com",
+  "siteUrlShort": "//hmrtmpl.com",
+  "siteEmail": "site-contact@url.com",
+  "siteAnalytics": "UA-XXXXXXXX-X",
+  "siteColor": "#D83434",
+  "copyright": "Copyright (C) 2014 Gregory Daynes. All rights reserved.",
+  "language": "en-GB",
+  "license": "v2.0. http://www.apache.org/licenses/LICENSE-2.0",
+  "creatorName": "Gregory Daynes",
+  "creatorTwitter": "@gregdaynes",
+  "twitterCard": "summary",
   "repository": {
     "type": "git",
-    "url":  "https://github.com/gregdaynes/hammer-template"
+    "url": "https://github.com/gregdaynes/hammer-template"
   },
-
-
-
   "bugs": {
     "url": "https://github.com/gregdaynes/hammer-template/issues"
   },
-
-
-
   "devDependencies": {
     "load-grunt-tasks": "~0.4.0",
     "grunt": "~0.4.4",
     "grunt-contrib-connect": "~0.7.1",
     "grunt-autoprefixer": "~0.7.3",
     "grunt-replace": "~0.7.7",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-svgmin": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.7.0"
   }
-
-
 }
