@@ -2,11 +2,11 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-    
+
     globalConfig:
       root: 'Build/'
       css:  'Build/assets/css'
-    
+
     autoprefixer:
       options:
         browsers: ['last 2 version', 'ie 9', '> 1%']
@@ -15,14 +15,50 @@ module.exports = (grunt) ->
         cwd: '<%= globalConfig.css %>'
         src: '**/*.css'
         dest: '<%= globalConfig.css %>'
+        
+    cssmin:
+      options:
+        report: 'gzip'
+      publish:
+        expand: true
+        cwd: '<%= globalConfig.css%>'
+        src: ['*.css']
+        dest: '<%= globalConfig.css%>'
+        ext: '.css'
+        
+    clean:
+      files: ['Build/node_modules', '.DS_Store', 'Icon?']
+      
+    htmlmin:
+      dist:
+        options:
+          removeComments: true,
+          collapseWhitespace: true
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.root %>',
+          src: ['*.html'],
+          dest: '<%= globalConfig.root %>',
+        }]
     
+    uglify:
+      options:
+        report: 'gzip'
+      dist:
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.root %>/assets/js',
+          src: '**/*.js',
+          dest: '<%= globalConfig.root %>/assets/js'
+        }]
+
     connect:
       server:
         options:
           port: 8080
           base: '<%= globalConfig.root %>'
           livereload: true
-    
+
     replace:
       build:
         options: {
@@ -58,7 +94,7 @@ module.exports = (grunt) ->
             dest: '<%= globalConfig.root %>',
           }
         ]
-          
+
     watch:
       options:
         livereload: true
@@ -68,20 +104,53 @@ module.exports = (grunt) ->
       replace:
         files: '<%= globalConfig.root %>**/*.*'
         tasks: 'replace'
+      img:
+        files: '<%= globalConfig.root %>/assets/img/**/*.*'
+        tasks: 'imagemin'
+      general:
+        files: '<%= globalConfig.root %>/node_modules/**/*.*'
+        tasks: 'clean'
+
+    imagemin:
+      build:
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.root %>/assets/img',
+          src: ['**/*.png','**/*.gif','**/*.jpg'],
+          dest: '<%= globalConfig.root %>/assets/img'
+        }]
         
   # !Load Tasks
   require("load-grunt-tasks") grunt
-  
+
   grunt.registerTask 'css', [
     'autoprefixer'
   ]
-  
+
   grunt.registerTask 'default', [
     'css'
-    
+
     'replace'
     
     'connect'
-    
+
     'watch'
+    
+    'clean'
+  ]
+  
+  grunt.registerTask 'publish', [
+    'css'
+
+    'replace'
+
+    'imagemin'
+    
+    'cssmin'
+    
+    'htmlmin'
+    
+    'uglify'
+    
+    'clean'
   ]
