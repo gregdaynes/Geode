@@ -1,9 +1,10 @@
 *.psd
 _resources/*
+assets/css/libraries/*
+bower_components/*
 README.md
 template.txt
 LICENSE.md
-node_modules/*
 Gruntfile.coffee
 package.json
-assets/css/libraries/*
+node_modules/*
