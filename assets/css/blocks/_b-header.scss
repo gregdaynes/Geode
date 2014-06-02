@@ -1,0 +1,61 @@
+.site-header {}
+.site-name {}
+.page-title {}
+
+.headroom {}
+.headroom--top {}
+.headroom--pinned {}
+.headroom--not-top {}
+.headroom--unpinned {}
+
+.site-nav {}
+.site-nav__list {}
+.site-nav__item {}
+.site-nav__link {}
+
+
+//////////          //////////          //////////          //////////
+          //////////          //////////          //////////          //////////
+          
+.site-header {
+  background-color: $color--orange;
+  height: 250px;
+}
+
+.site-nav__list {
+  @extend %clean-list;
+  @extend %grid--full;
+}
+
+.site-nav__item {
+  @extend %grid__item;
+  @extend %bp1--one-whole;
+}
+
+.site-name {
+  line-height: 250px;
+  text-align: center;
+}
+
+.site-nav {
+  position: absolute;
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.headroom--pinned {
+    display: block;
+}
+
+.headroom--unpinned {
+    display: none;
+}
