@@ -8,3 +8,4 @@ LICENSE.md
 Gruntfile.coffee
 package.json
 node_modules/*
+_devperf
