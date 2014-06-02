@@ -25,7 +25,7 @@
     "url": "https://github.com/gregdaynes/hammer-template/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "~0.7.3",
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-connect": "~0.7.1",
@@ -37,6 +37,9 @@
     "grunt-devperf": "^0.2.6",
     "grunt-replace": "~0.7.7",
     "grunt-svgmin": "^0.4.0",
-    "load-grunt-tasks": "~0.4.0"
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-compare-size": "^0.4.0",
+    "grunt-processhtml": "^0.3.3",
+    "connect": "^2.18.0"
   }
 }

@@ -1,0 +1,10 @@
+README.md
+template.txt
+LICENSE.md
+Gruntfile.coffee
+package.json
+_devperf
+_resources/*
+node_modules/*
+assets/css/libraries/*
+.sizecache.json

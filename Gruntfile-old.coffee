@@ -4,73 +4,36 @@ module.exports = (grunt) ->
     pkg: grunt.file.readJSON('package.json')
 
     globalConfig:
-      root: '_dev/Build/'
-      css:  '_dev/Build/assets/css'
-      img:  '_dev/Build/assets/img'
-      js:   '_dev/Build/assets/js'
- 
+      root: 'Build/'
+      css:  'Build/assets/css'
+      img:  'Build/assets/img'
+      js:   'Build/assets/js'
 
 
-    # dev | production
     autoprefixer:
       options:
         browsers: ['last 2 version', 'ie 10', '> 1%']
-      dev:
-        expand: true
-        cwd:  '<%= globalConfig.css %>'
-        src:  '**/*.css'
-        dest: '<%= globalConfig.css %>'
-        
-      production:
-        expand: true
-        cwd:  '<%= globalConfig.root %>'
-        src:  '**/*.css'
-        dest: '<%= globalConfig.root %>'
-        
-        
-        
-        
-    # production
-    cssmin:
-      production:
-        expand: true
-        cwd: '<%= globalConfig.root %>'
-        src: '**/*.css'
-        dest: '<%= globalConfig.root %>'
-        ext: '.css'
-        
-        options:
-          report: 'gzip'
-
-
-
-
-
-    # production
-    imagemin:
       build:
-        files: [{
-          expand: true,
-          cwd: '<%= globalConfig.img %>',
-          src: ['**/*.png','**/*.gif','**/*.jpg'],
-          dest: '<%= globalConfig.img %>'
-        }]
-    
+        expand: true
+        cwd: '<%= globalConfig.css %>'
+        src: '**/*.css'
+        dest: '<%= globalConfig.css %>'
+
+    cssmin:
+      options:
+        report: 'gzip'
+      publish:
+        expand: true
+        cwd: '<%= globalConfig.css %>'
+        src: ['*.css']
+        dest: '<%= globalConfig.css %>'
+        ext: 'min.css'
+        
 
 
-
-
-    # production
     clean:
-      files: [
-        '<%= globalConfig.root %>/node_modules',
-        '<%= globalConfig.root %>/.DS_Store',
-        '<%= globalConfig.root %>/Icon?']
+      files: ['Build/node_modules', '.DS_Store', 'Icon?']
 
-
-
-
-    # production
     htmlmin:
       dist:
         options:
@@ -82,32 +45,18 @@ module.exports = (grunt) ->
           src: ['*.html'],
           dest: '<%= globalConfig.root %>',
         }]
-    
 
-
-
-
-    # production
     uglify:
+      options:
+        report: 'gzip'
       dist:
         files: [{
           expand: true,
-          cwd: '<%= globalConfig.root %>',
+          cwd: '<%= globalConfig.root %>/assets/js',
           src: '**/*.js',
-          dest: '<%= globalConfig.root %>'
+          dest: '<%= globalConfig.root %>/assets/js'
         }]
-        options:
-          report: 'gzip'
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    # dev | production
+
     connect:
       server:
         options:
@@ -115,15 +64,6 @@ module.exports = (grunt) ->
           base: '<%= globalConfig.root %>'
           livereload: true
 
-                      
-                   
-          
-          
-          
-          
-          
-          
-    # dev | production 
     replace:
       build:
         options: {
@@ -154,96 +94,78 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true,
+            # flatten: true,
             cwd: '<%= globalConfig.root %>',
-            src: ['**/*.html'],
+            src: '**/*.html',
             dest: '<%= globalConfig.root %>',
           }
         ]
-        
-        
-        
-        
-        
-        
-        
-    # PERFORMANCE STUFF
-    devperf:
-      options:
-        urls: [
-          'http://0.0.0.0:8080'
-        ]
-        numberOfRuns: 10,
-        timeout: 120,
-        openResults: true,
-        resultsFolder: './devperf'
-        
-    compare_size: 
-      options:
-        cache: "sizecache.json"
-      files:
-        expand: true
-        cwd: '<%= globalConfig.css %>'
-        src: ['**/*.css']
-      
-      
+
     watch:
       options:
-        livereload: false
+        livereload: true
       css:
-        files: '<%= globalConfig.css %>/**/*.css'
+        files: '<%= globalConfig.css %>'
         tasks: ['css']
       replace:
-        files: '<%= globalConfig.root %>/**/*.html'
+        files: '<%= globalConfig.root %>**/*.*'
         tasks: ['replace']
       img:
-        files: ['<%= globalConfig.img %>/**/*.jpg','<%= globalConfig.img %>/**/*.png','<%= globalConfig.img %>/**/*.svg']
+        files: '<%= globalConfig.img %>**/*.*'
         tasks: ['imagemin']
 
+    imagemin:
+      build:
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.root %>/assets/img',
+          src: ['**/*.png','**/*.gif','**/*.jpg'],
+          dest: '<%= globalConfig.root %>/assets/img'
+        }]
 
   # !Load Tasks
   require("load-grunt-tasks") grunt
 
   grunt.registerTask 'css', [
-    'autoprefixer:dev'
+    'autoprefixer'
   ]
   
-  grunt.registerTask 'css-production', [
-    'autoprefixer:production'
-    'cssmin:production'
-  ]
-  
-  grunt.registerTask 'default', [
-    'replace'
+  grunt.registerTask 'css_publish', [
+    'autoprefixer'
+    'cssmin'
     
+  ]
+
+  grunt.registerTask 'default', [
     'css'
+
+    'replace'
     
     'compare_size'
-    
+
     'connect'
     
-    'devperf'
-    
+    'clean'
+
     'watch'
   ]
-  
-  grunt.registerTask 'production', [
+
+  grunt.registerTask 'publish', [
+    'css_publish'
+
     'replace'
     
-    'css-production'
-    
+
     'imagemin'
-    'clean'
-    'htmlmin:dist'
+
+    'htmlmin'
+
     'uglify'
     
+    'compare_size'
+
+    'clean'
+    
     'connect'
     
-    'devperf'
-    
-    'watch'
-  ]
-  
-  grunt.registerTask 'dev-perf', [
-    'connect'
-    'devperf'
   ]
