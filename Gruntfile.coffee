@@ -15,20 +15,30 @@ module.exports = (grunt) ->
         cwd: '<%= globalConfig.css %>'
         src: '**/*.css'
         dest: '<%= globalConfig.css %>'
-        
+
     cssmin:
       options:
         report: 'gzip'
       publish:
         expand: true
-        cwd: '<%= globalConfig.css%>'
+        cwd: '<%= globalConfig.css %>'
         src: ['*.css']
-        dest: '<%= globalConfig.css%>'
+        dest: '<%= globalConfig.css %>'
         ext: '.css'
         
+    devperf:
+      options:
+        urls: [
+          'http://0.0.0.0:8080'
+        ]
+        numberOfRuns: 5,
+        timeout: 120,
+        openResults: true,
+        resultsFolder: './_devperf'
+
     clean:
       files: ['Build/node_modules', '.DS_Store', 'Icon?']
-      
+
     htmlmin:
       dist:
         options:
@@ -40,7 +50,7 @@ module.exports = (grunt) ->
           src: ['*.html'],
           dest: '<%= globalConfig.root %>',
         }]
-    
+
     uglify:
       options:
         report: 'gzip'
@@ -81,7 +91,8 @@ module.exports = (grunt) ->
             { match: 'keywords', replacement: '<%= pkg.keywords %>' },
             { match: 'description', replacement: '<%= pkg.description %>' },
             { match: 'twitter', replacement: '<%= pkg.twitter %>' },
-            { match: 'twitterCard', replacement: '<%= pkg.twitterCard %>' }
+            { match: 'twitterCard', replacement: '<%= pkg.twitterCard %>' },
+            { match: 'creatorName', replacement: '<%= pkg.creatorName %>' }
           ]
         }
 
@@ -100,13 +111,13 @@ module.exports = (grunt) ->
         livereload: true
       css:
         files: '<%= globalConfig.css %>'
-        tasks: 'css'
+        tasks: ['css']
       replace:
         files: '<%= globalConfig.root %>**/*.*'
-        tasks: 'replace'
+        tasks: ['replace']
       img:
         files: '<%= globalConfig.root %>/assets/img/**/*.*'
-        tasks: 'imagemin'
+        tasks: ['imagemin']
       general:
         files: '<%= globalConfig.root %>/node_modules/**/*.*'
         tasks: 'clean'
@@ -119,7 +130,7 @@ module.exports = (grunt) ->
           src: ['**/*.png','**/*.gif','**/*.jpg'],
           dest: '<%= globalConfig.root %>/assets/img'
         }]
-        
+
   # !Load Tasks
   require("load-grunt-tasks") grunt
 
@@ -131,26 +142,30 @@ module.exports = (grunt) ->
     'css'
 
     'replace'
-    
+
     'connect'
 
-    'watch'
     
     'clean'
+
+    'watch'
   ]
-  
+
   grunt.registerTask 'publish', [
     'css'
 
     'replace'
 
     'imagemin'
-    
+
     'cssmin'
-    
+
     'htmlmin'
-    
+
     'uglify'
-    
+
     'clean'
+    
+    'connect'
+    
   ]
