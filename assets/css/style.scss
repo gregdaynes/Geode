@@ -174,16 +174,27 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 
 
-// $GRIDS
-
-
 
 
 
 // $LAYOUT
+ul,
+li {
+  max-width: inherit;
+}
+
+picture {
+  max-width: 100%;
+}
+
+picture img {
+  width: 100%;
+}
 
 
 
 
 
-// $MODULES
+// $BLOCKS
+@import "blocks/_b-header.scss";
+@import "blocks/_b-buttons.scss";
