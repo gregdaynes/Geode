@@ -1,11 +1,10 @@
-*.psd
-_resources/*
-assets/css/libraries/*
-bower_components/*
 README.md
 template.txt
 LICENSE.md
 Gruntfile.coffee
 package.json
-node_modules/*
 _devperf
+_resources/*
+node_modules/*
+assets/css/libraries/*
+.sizecache.json
