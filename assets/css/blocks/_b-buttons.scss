@@ -1,0 +1,48 @@
+section.buttons {
+  background-color: #2b3135;
+  padding: 25px 0;
+  display: block;
+}
+
+.btn {
+  @extend %font-heading;
+  border: 1px solid #006242;
+  border-radius: 3px;
+  color: $color--white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3),
+        inset 0 0   1px #00bb72;
+  font-weight: 400;
+  padding: $gutter--narrow $gutter--normal;
+
+  @include vertical-gradient(#00b763, #008a4d);
+}
+
+.btn:hover {
+  background-image: none;
+  background-color: #00b160;
+}
+
+.btn:active {
+  box-shadow: inset 0 1px 0 #0a543b;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+  @include vertical-gradient(#00b763, #008a4d);
+}
+
+.btn--hollow {
+  background-color: rgba(0,0,0,0);
+  background-image: none;
+  border: 1px solid $color--white;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.btn--hollow:hover {
+  background-color: transparent;
+  border-color: #00b160;
+  color: #00b160;
+}
+
+.btn--hollow:active {
+  background-image: none;
+  background-color: rgba(0,0,0,0.15);
+}
