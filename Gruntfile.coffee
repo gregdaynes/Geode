@@ -8,7 +8,7 @@ module.exports = (grunt) ->
       css:  '_dev/Build/assets/css'
       img:  '_dev/Build/assets/img'
       js:   '_dev/Build/assets/js'
- 
+
 
 
     # dev | production
@@ -20,16 +20,16 @@ module.exports = (grunt) ->
         cwd:  '<%= globalConfig.css %>'
         src:  '**/*.css'
         dest: '<%= globalConfig.css %>'
-        
+
       production:
         expand: true
         cwd:  '<%= globalConfig.root %>'
         src:  '**/*.css'
         dest: '<%= globalConfig.root %>'
-        
-        
-        
-        
+
+
+
+
     # production
     cssmin:
       production:
@@ -38,7 +38,7 @@ module.exports = (grunt) ->
         src: '**/*.css'
         dest: '<%= globalConfig.root %>'
         ext: '.css'
-        
+
         options:
           report: 'gzip'
 
@@ -55,7 +55,7 @@ module.exports = (grunt) ->
           src: ['**/*.png','**/*.gif','**/*.jpg'],
           dest: '<%= globalConfig.img %>'
         }]
-    
+
 
 
 
@@ -82,7 +82,7 @@ module.exports = (grunt) ->
           src: ['*.html'],
           dest: '<%= globalConfig.root %>',
         }]
-    
+
 
 
 
@@ -98,15 +98,15 @@ module.exports = (grunt) ->
         }]
         options:
           report: 'gzip'
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
     # dev | production
     connect:
       server:
@@ -115,15 +115,15 @@ module.exports = (grunt) ->
           base: '<%= globalConfig.root %>'
           livereload: true
 
-                      
-                   
-          
-          
-          
-          
-          
-          
-    # dev | production 
+
+
+
+
+
+
+
+
+    # dev | production
     replace:
       build:
         options: {
@@ -159,33 +159,33 @@ module.exports = (grunt) ->
             dest: '<%= globalConfig.root %>',
           }
         ]
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
     # PERFORMANCE STUFF
     devperf:
       options:
         urls: [
           'http://0.0.0.0:8080'
         ]
-        numberOfRuns: 10,
-        timeout: 120,
-        openResults: true,
+        numberOfRuns: 10
+        timeout: 120
+        openResults: true
         resultsFolder: './devperf'
-        
-    compare_size: 
+
+    compare_size:
       options:
         cache: "sizecache.json"
       files:
         expand: true
         cwd: '<%= globalConfig.css %>'
         src: ['**/*.css']
-      
-      
+
+
     watch:
       options:
         livereload: false
@@ -206,44 +206,44 @@ module.exports = (grunt) ->
   grunt.registerTask 'css', [
     'autoprefixer:dev'
   ]
-  
+
   grunt.registerTask 'css-production', [
     'autoprefixer:production'
     'cssmin:production'
   ]
-  
+
   grunt.registerTask 'default', [
     'replace'
-    
+
     'css'
-    
+
     'compare_size'
-    
+
     'connect'
-    
-    'devperf'
-    
+
+#    'devperf'
+
     'watch'
   ]
-  
+
   grunt.registerTask 'production', [
     'replace'
-    
+
     'css-production'
-    
-    'imagemin'
+
+#    'imagemin'
     'clean'
     'htmlmin:dist'
     'uglify'
-    
+
     'connect'
-    
-    'devperf'
-    
+
+#    'devperf'
+
     'watch'
   ]
-  
-  grunt.registerTask 'dev-perf', [
-    'connect'
-    'devperf'
-  ]
+
+#  grunt.registerTask 'dev-perf', [
+#    'connect'
+#    'devperf'
+#  ]

@@ -159,6 +159,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 *:before,
 *:after {
   box-sizing:  border-box;
+  overflow: auto;
 }
 
 
