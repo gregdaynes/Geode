@@ -158,8 +158,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 *,
 *:before,
 *:after {
-  box-sizing:  border-box;
-  overflow: auto;
+  box-sizing: border-box;
 }
 
 
@@ -174,11 +173,21 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 
 
+body {
+  margin: 0 auto;
 
+}
 
 
 
 // $LAYOUT
+.main-content {
+  width: $size--measure;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 ul,
 li {
   max-width: inherit;
@@ -186,16 +195,64 @@ li {
 
 picture {
   max-width: 100%;
+  overflow: visible;
+
+  @include mediaQuery(400px, max-width) {
+    width:  320px;
+  }
 }
 
 picture img {
   width: 100%;
 }
 
+@include mediaQuery($size--measure * 1.5, min-width) {
 
+  .main-content picture,
+  .main-content figure {
+    width: $size--measure * .75;
+  }
+
+  .picture--pull-left,
+  .figure--pull-left,
+  .picture--pull-right,
+  .figure--pull-right {
+    float: left;
+    margin-left: -25%;
+    margin-right:  $gutter--narrow;
+    margin-bottom: $gutter--skinny;
+    text-align: center;
+    border-right: 1px solid $color--gray-lighter;
+    padding-right: $gutter--narrow;
+  }
+
+  .figure--align-right,
+  .figure--align-left {
+    text-align: right;
+  }
+
+}
+
+@include mediaQuery($size--measure * 2, min-width) {
+
+  .picture--pull-right,
+  .figure--pull-right {
+    float: right;
+    margin-right: -25%;
+    margin-left:  $gutter--narrow;
+    text-align: center;
+    border-right: none;
+    border-left: 1px solid $color--gray-lighter;
+    padding-right: 0;
+    padding-left: $gutter--narrow;
+  }
+
+  .figure--align-left {
+    text-align: left;
+  }
+}
 
 
 
 // $BLOCKS
-@import "blocks/_b-header.scss";
-@import "blocks/_b-buttons.scss";
+@import "geode-theme/_geode.scss";

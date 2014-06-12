@@ -243,7 +243,7 @@ module.exports = (grunt) ->
     'watch'
   ]
 
-#  grunt.registerTask 'dev-perf', [
-#    'connect'
-#    'devperf'
-#  ]
+  grunt.registerTask 'dev-perf', [
+    'connect'
+    'devperf'
+  ]
