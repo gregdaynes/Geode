@@ -1,8 +1,4 @@
-### __Below is out of date - new information coming soon__
-
 # Geode
-
-_formerly Hammer-Template_
 
 __Geode is a blank template for use with Hammer hammerformac.com__
 
@@ -21,9 +17,7 @@ Contents
 1. Introduction
 2. Contents
 3. How to install
-4. Ways to work with Geode
-  + Using Hammer
-  + Using Hammer and Grunt
+4. Working with Geode
 5. Variables
 6. Structure
 7. Classed Element Includes
@@ -56,13 +50,9 @@ Navigate to [Geode releases on Github.com](https://github.com/gregdaynes/Geode/r
 
 
 
-## 4. Ways to work with Geode
+## 4. Working with Geode
 
-_Geode_ works as a standalone Hammer template, as well as works well with Grunt.
-
-
-
-
+_Geode_ works as a standalone Hammer template
 
 ### The Hammer Way
 
@@ -78,42 +68,11 @@ To use _Geode_ with just Hammer
 
 
 
-### Grunt & Hammer
-
-to use _Geode_ with Grunt and Hammer together
-
-_Prerequisits_
-+ Node.js + NPM — nodejs.org
-  + Easy install packages are found on the site.
-
-1. Create a new project using the Geode Template.
-
-2. Terminal - Navigate to the project folder. 
-  + run: $npm install
-    + this will install the required grunt packages & their dependencies
-
-3. Customize the variables in the package.json file located in the root of the project.
-  + _Definitions of the variables are lower in this document._
-
-4. Terminal - Start up grunt
-  + run: $grunt
-    + Grunt will run and use the existing Build folder as its source.
-
-5. Build with Hammer.
-
-_As you edit the project, Hammer will build the files as normal, and Grunt will process the files as they build._
-
-
-
-
 
 ## 5. Variable Definitions
 
-The following are the variables defined in _Geode_. They are found in two places. How you are working with _Geode_ will determine which variable file should be edited.
-
-If you're working with just Hammer — you'll want to edit the _variables.html file found in the _partials directory.
-
-If you're working with Hammer and Grunt — you'll want to edit the package.json file found in the root directory of _Geode_
+The following are the variables defined in _Geode_. 
+Working with Hammer — you'll want to edit the _variables.html file found in the top level folder of your project.
 
 1. $version
   - Working version of the website
@@ -274,11 +233,13 @@ _Geode_ is not under any scheduled development. It remains as a side project of 
 
 @todo
 
-+ Geode example icons and startup images
-+ More default elements
-+ More default blocks
-+ Additional SCSS extends, mixing, functions
++ ~~Geode example icons and startup images~~
++ ~~More default elements~~
++ ~~More default blocks~~
++ ~~Additional SCSS extends, mixing, functions~~
 + Styleguide
++ Grunt Build tools [production]
++ Github page for project
 
 
 
