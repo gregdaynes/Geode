@@ -1,0 +1,12 @@
+<!-- -------------------------------
+   - Mobile
+   -
+   - [1] keep web-app saved pages in ios from opening every link in Safari
+         may be safer to not use.
+   - [2] single startup image - multiples may be used for customization
+   -->
+<!-- [1] -->
+<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+<!-- [2] -->
+<script type="text/javascript">!function(){var a="iPad"===navigator.platform?"startup_ipad-2048x1496.png":"startup_iphone-640x1096.png";document.write('<link rel="apple-touch-startup-image" href="/assets/img/'+a+'" />')}();</script>
