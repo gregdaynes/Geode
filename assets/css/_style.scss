@@ -1,0 +1,128 @@
+// $FUNCTIONS
+/* -- em($px) - convert px to ems */
+@import "functions";
+
+
+// $VARIABLES
+@import "variables";
+
+
+// $RESETS
+@import "normalize-3.0.1";
+@import "normalize-opentype-0.1.2";
+
+
+// $EXTENDS
+/* -- %ir - image replacement for text         */
+/* -- %hide - hide element from screen         */
+/* -- %zero - remove padding & margin          */
+/* -- %clean-list - remove list formatting     */
+/* -- %clearfix - clear floats                 */
+/* -- %outline - outline element in red border */
+/* -- %container - responsive center aligned   */
+@import "extends";
+
+
+// $MIXINS
+/* -- @mediaQuery - value, constraint, target     */
+/* -- @vertical-gradient - start, stop, direction */
+/* -- @ir - image replacement (no args)           */
+@import "mixins";
+
+
+// $SCAFFOLDING
+@import "csswizardry-grids.scss";
+
+
+// $TYPOGRAPHY
+@import "typography";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+
+// $GENERAL
+body {
+  @extend %center;
+  max-width: 90%;
+}
+
+.main-content {
+  @extend %center;
+
+  width: $size--measure;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+ul,
+li {
+  max-width: inherit;
+}
+
+picture {
+  max-width: 100%;
+  overflow: visible;
+}
+
+picture img {
+  width: 100%;
+}
+
+// Image layouts in main content
+@media (min-width: $size--measure * 1.5) {
+
+  .main-content picture,
+  .main-content figure {
+    width: $size--measure * .75;
+  }
+
+  .picture--pull-left,
+  .figure--pull-left,
+  .picture--pull-right,
+  .figure--pull-right {
+    float: left;
+    margin-left: -25%;
+    margin-right:  $gutter--narrow;
+    margin-bottom: $gutter--skinny;
+    text-align: center;
+    border-right: 1px solid $color--gray-lighter;
+    padding-right: $gutter--narrow;
+  }
+
+  .figure--align-right,
+  .figure--align-left {
+    text-align: right;
+  }
+
+}
+
+@media (min-width: $size--measure * 2) {
+  .picture--pull-right,
+  .figure--pull-right {
+    float: right;
+    margin-right: -25%;
+    margin-left:  $gutter--narrow;
+    text-align: center;
+    border-right: none;
+    border-left: 1px solid $color--gray-lighter;
+    padding-right: 0;
+    padding-left: $gutter--narrow;
+  }
+
+  .figure--align-left {
+    text-align: left;
+  }
+}
+
+
+// $BLOCKS
