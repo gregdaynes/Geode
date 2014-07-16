@@ -1,0 +1,29 @@
+<!----------------------------------
+   - Critical CSS
+   -
+   - When using grunt-processhtml
+   - inlines critical css
+   -->
+<style>
+  <!-- build:include assets/css/critical.css -->
+  </style><!-- @stylesheet critical --><style>
+  <!-- /build -->
+</style>
+<!-- /Critical CSS -->
+
+<!----------------------------------
+   - Non-Critical CSS
+   -
+   - When using grunt-processhtml
+   - asynchronous load non-critical css
+   -->
+<!-- build:include ../assets/utils/css-loader.html -->
+<!-- @stylesheet non-critical -->
+<!-- /build -->
+<!-- /Non-Critical CSS -->
+
+<!-- build:remove -->
+<!-- Prefix required css
+   - this should be done server side, or when building production site
+<!-- @javascript prefixfree.min -->
+<!-- /build -->

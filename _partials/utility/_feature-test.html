@@ -1,0 +1,18 @@
+<!-- -------------------------------
+   - Feature Test
+   -
+   - yepnope test for features in browser
+   - polyfill if not available
+   -->
+<!-- @javascript yepnope.min.js -->
+<script>
+  yepnope({
+    test: window.HTMLPictureElement,
+    nope: ['<!-- @path picturefill.min.js -->']
+  },
+  {
+    test: "classList" in document.createElement("_"),
+    nope: ['<!-- @path classList.min.js -->']
+  });
+</script>
+<!-- /Feature Test -->
