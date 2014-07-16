@@ -233,11 +233,13 @@ _Geode_ is not under any scheduled development. It remains as a side project of 
 
 @todo
 
-+ --Geode example icons and startup images--
-+ --More default elements--
-+ --More default blocks--
-+ --Additional SCSS extends, mixing, functions--
++ ~~Geode example icons and startup images~~
++ ~~More default elements~~
++ ~~More default blocks~~
++ ~~Additional SCSS extends, mixing, functions~~
 + Styleguide
++ Grunt Build tools [production]
++ Github page for project
 
 
 
