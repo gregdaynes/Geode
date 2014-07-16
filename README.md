@@ -1,3 +1,5 @@
+### __Below is out of date - new information coming soon__
+
 # Geode
 
 _formerly Hammer-Template_
