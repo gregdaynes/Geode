@@ -48,8 +48,7 @@ $size--measure: 35em;
 /* -- Breakpoints */
 $palm:     em(300px);
 $lap:      em(768px);
-$portable: em(1024px);
-$desk:     em(1024.1px);
+$desk:     em(1024px);
 
 /* -- Libraries  */
 /* ---- Typecsset */
@@ -67,8 +66,8 @@ $grid__pull:                  false;
 $grid__use-markup-fix:        true;
 $grid__breakpoints: (
   'palm' '(max-width: #{$palm})',
-  'lap' '(min-width: #{$lap}) and (max-width: #{$portable})',
-  'portable' '(max-width: #{$portable})',
+  'lap' '(min-width: #{$lap}) and (max-width: #{$desk})',
+  'portable' '(max-width: #{$desk})',
   'desk' '(min-width: #{$desk})'
 );
 $grid__breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
