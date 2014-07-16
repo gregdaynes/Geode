@@ -74,33 +74,33 @@
  * If you are building a non-responsive site but would still like to use
  * magic-grids, set this to ‘false’:
  */
-$responsive:            true!default;
+$grids__responsive:            true!default;
 
 
 /**
  * Is this build mobile first? Setting to ‘true’ means that all grids will be
  * 100% width if you do not apply a more specific class to them.
  */
-$mobile-first:          true!default;
+$grids__mobile-first:          true!default;
 
 
 /**
  * Set the spacing between your grid items.
  */
-$gutter:                1.5rem!default;
+$grids__gutter:                1.5rem!default;
 
 
 /**
  * Would you like Sass’ silent classes, or regular CSS classes?
  */
-$use-silent-classes:    false!default;
+$grids__use-silent-classes:    false!default;
 
 
 /**
  * Would you like push and pull classes enabled?
  */
-$push:                  true!default;
-$pull:                  true!default;
+$grids__push:                  true!default;
+$grids__pull:                  true!default;
 
 
 /**
@@ -108,7 +108,7 @@ $pull:                  true!default;
  * your classes (e.g. `.palm--one-half`), the second value is the media query
  * that the breakpoint fires at.
  */
-$breakpoints: (
+$grids__breakpoints: (
   'palm' '(max-width: 29.99rem)',
   'lap' '(min-width: 30rem) and (max-width: 63.99rem)',
   'portable' '(max-width: 63.99rem)',
@@ -126,9 +126,9 @@ $breakpoints: (
  * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
  * have been set to ‘true’.
  */
-$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk')!default;
-$breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk')!default;
-$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
+$grids__breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk')!default;
+$grids__breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk')!default;
+$grids__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
 
 
 /**
@@ -157,7 +157,7 @@ $class-type:          unquote(".");
 @mixin grid-media-query($media-query){
   $breakpoint-found: false;
 
-  @each $breakpoint in $breakpoints{
+  @each $breakpoint in $grids__breakpoints{
     $name: nth($breakpoint, 1);
     $declaration: nth($breakpoint, 2);
 
@@ -181,7 +181,7 @@ $class-type:          unquote(".");
  * the `[class*="push--"]` and `[class*="pull--"]` selectors.
  */
 @mixin silent-relative(){
-  @if $use-silent-classes == true{
+  @if $grids__use-silent-classes == true{
     position: relative;
   }
 }
