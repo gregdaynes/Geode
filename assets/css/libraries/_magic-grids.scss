@@ -137,7 +137,7 @@ $grids__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk')!default;
  */
 $class-type:          unquote(".");
 
-@if $use-silent-classes == true{
+@if $grids__use-silent-classes == true{
   $class-type:        unquote("%");
 }
 
@@ -202,7 +202,7 @@ $class-type:          unquote(".");
   list-style: none;                /* [1] */
   margin: 0;                       /* [2] */
   padding: 0;                      /* [2] */
-  margin-left: -$gutter;           /* [3] */
+  margin-left: -$grids__gutter;           /* [3] */
 }
 
 
@@ -215,9 +215,9 @@ $class-type:          unquote(".");
  */
 #{$class-type}Grid-item{
   display: inline-block;           /* [1] */
-  padding-left: $gutter;           /* [2] */
+  padding-left: $grids__gutter;           /* [2] */
   vertical-align: top;             /* [3] */
-  @if $mobile-first == true{
+  @if $grids__mobile-first == true{
     width: 100%;                   /* [4] */
   }
   -webkit-box-sizing: border-box;  /* [5] */
@@ -302,10 +302,10 @@ $class-type:          unquote(".");
  * Create grids with narrower gutters. Extends `.Grid`.
  */
 #{$class-type}Grid--narrow{
-  margin-left: -($gutter / 2);
+  margin-left: -($grids__gutter / 2);
 
   > #{$class-type}Grid-item{
-    padding-left: $gutter / 2;
+    padding-left: $grids__gutter / 2;
   }
 }
 
@@ -314,10 +314,10 @@ $class-type:          unquote(".");
  * Create grids with wider gutters. Extends `.grid`.
  */
 #{$class-type}Grid--wide{
-  margin-left: -($gutter * 2);
+  margin-left: -($grids__gutter * 2);
 
   > #{$class-type}Grid-item{
-    padding-left: $gutter * 2;
+    padding-left: $grids__gutter * 2;
   }
 }
 
@@ -432,9 +432,9 @@ $class-type:          unquote(".");
 /**
  * Our responsive classes, if we have enabled them.
  */
-@if $responsive == true{
+@if $grids__responsive == true{
 
-  @each $name in $breakpoint-has-widths {
+  @each $name in $grids__breakpoint-has-widths {
     @include grid-media-query($name) {
       @include device-type('#{$name}--');
     }
@@ -543,7 +543,7 @@ $class-type:          unquote(".");
 
 }
 
-@if $push == true {
+@if $grids__push == true {
 
   /**
    * Not a particularly great selector, but the DRYest way to do things.
@@ -552,8 +552,8 @@ $class-type:          unquote(".");
 
   @include push-setup();
 
-  @if $responsive == true{
-    @each $name in $breakpoint-has-push {
+  @if $grids__responsive == true{
+    @each $name in $grids__breakpoint-has-push {
       @include grid-media-query($name) {
         @include  push-setup('#{$name}--');
       }
@@ -663,7 +663,7 @@ $class-type:          unquote(".");
 
 }
 
-@if $pull == true{
+@if $grids__pull == true{
 
   /**
    * Not a particularly great selector, but the DRYest way to do things.
@@ -672,8 +672,8 @@ $class-type:          unquote(".");
 
   @include pull-setup();
 
-  @if $responsive == true{
-      @each $name in $breakpoint-has-pull {
+  @if $grids__responsive == true{
+      @each $name in $grids__breakpoint-has-pull {
           @include grid-media-query($name) {
              @include  pull-setup('#{$name}--');
           }
