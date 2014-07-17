@@ -1,20 +1,2 @@
-*.esproj
-Build/
-publish/
-resources/tmp/
-*.sublime*
-
-# OS generated files #
-######################
+*Build/*
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-Thumbs.db
-node_modules/
-bower_components/
-devperf
-sizecache.json
