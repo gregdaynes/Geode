@@ -2,7 +2,7 @@
    -- $MIXINS --                                                              */
 
   // @mediaQuery - value, constraint, target
-  @mixin mediaQuery($unit, $first-query: min-width, $target: screen) {
+  @mixin media($unit, $first-query: min-width, $target: screen) {
 
     @debug $first-query;
 

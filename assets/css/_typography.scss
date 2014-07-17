@@ -1,229 +1,80 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700,400italic,700italic);
+// Google Fonts
+//@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700|Source+Code+Pro|Source+Serif+Pro:400,700);
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'),
+       local('SourceCodePro-Regular'),
+       url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/mrl8jkM18OlOQN8JLgasD9Hq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Source Sans Pro ExtraLight'),
+       local('SourceSansPro-ExtraLight'),
+       url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGC-IiwWNzQT_LXAtr-Ee9Pw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'),
+       local('SourceSansPro-Regular'),
+       url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'),
+       local('SourceSansPro-Bold'),
+       url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGIqjGYJUyOXcBwUQbRaNH6c.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'),
+       local('SourceSerifPro-Regular'),
+       url(http://themes.googleusercontent.com/static/fonts/sourceserifpro/v1/CeUM4np2c42DV49nanp55WexEcYmAZbjhZzYUOfAc5s.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Serif Pro Bold'),
+       local('SourceSerifPro-Bold'),
+       url(http://themes.googleusercontent.com/static/fonts/sourceserifpro/v1/yd5lDMt8Sva2PE17yiLarADgozsg_Bg4nze8RiJkiAA.woff) format('woff');
+}
+
 
 %measure {
   width: 100%;
   max-width: $size--measure;
 }
 
-%font-body {
-  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
-}
+%font-serif {
+  font-family: serif;
 
-%font-heading {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
-
-body {
-  @extend %font-body;
-
-  font-size:100%;
-  line-height:1.5;
-
-  @include mediaQuery($lap, max-width) {
-    font-size: 90%;
+  @media (min-width: em(1000px)) {
+    font-family: 'Source Serif Pro', serif;
   }
 }
 
-blockquote {
-  @extend %measure;
+%font-sans-serif {
+  font-family: sans-serif;
 
-  position: relative;
-  margin-left: 0;
-  text-align: justify;
-
-  @include mediaQuery($lap) {
-    margin-left: 3em;
-  }
-
-  &:before,
-  &:after {
-    height: 1em;
-    position: absolute;
-    z-index: -1;
-    font-size: 400%;
-    display: block;
-    color: $color--gray-lighter;
-  }
-
-  &:before {
-    content: '“';
-    top: -.35em;
-    left: 0;
-
-    @include mediaQuery($lap) {
-      left: -.65em;
-    }
-  }
-
-  &:after {
-    right: 0;
-    bottom: -.5em;
-    content: '”';
-
-    @include mediaQuery($lap) {
-      right: -.65em;
-    }
+  @media (min-width: em(1000px)) {
+    font-family: 'Source Sans Pro', sans-serif;
   }
 }
 
-blockquote + figcaption {
-  @include mediaQuery($lap) {
-    margin-left: 3.6em;
+%font-mono {
+  font-family: monospace;
+
+  @media (min-width: em(1000px)) {
+    font-family: 'Source Code Pro', monospace;
   }
 }
-
-figcaption {
-  color: $color--gray-light;
-  font-size: 80%;
-  font-style: italic;
-}
-
-figure {
-  margin: 0;
-  width: 100%;
-}
-
-figure img {
-  width: 100%;
-}
-
-mark {
-  background-color: transparentize($color--yellow, .6);
-  position: relative;
-
-
-  &:after,
-  &:before {
-    background-color: transparentize($color--yellow, .6);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: $gutter--skinny;
-    z-index: -1;
-    content: '';
-  }
-
-  &:before {
-    left: -$gutter--skinny;
-  }
-
-  &:after {
-    right: -$gutter--skinny;
-  }
-}
-
-ul,
-ol {
-  @extend %measure;
-  padding-left: $gutter--normal;
-  list-style-position: outside;
-  @include mediaQuery($lap) {
-    padding-left: $gutter--normal;
-  }
-}
-
-dl {
-  @extend %measure;
-}
-
-dt {
-
-}
-
-dd {
-  margin-left: $gutter--narrow;
-  font-style: italic;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-
-td,
-th {
-  border: 1px solid $color--black;
-  padding: $gutter--skinny $gutter--narrow;
-}
-
-th {
-  @extend %font-heading;
-  background-color: $color--gray-lighter;
-  font-weight: bold;
-
-}
-
-p {
-  @extend %measure;
-  margin-bottom: 1em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend %font-heading;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-
-  span {
-    @extend %font-body;
-    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
-    font-style:italic;
-  }
-}
-
-a {
-  color: $color--blue;
-
-  &:hover,
-  &:focus {
-    color: $color--aqua;
-  }
-
-  &:active {
-    color: $color--navy;
-  }
-}
-
-
-h1 {
-  font-size: 2.747em;
-  line-height:1.1;
-
-  span:nth-of-type(1) {
-    font-size:0.63em;
-    display:block;
-    margin: 1em auto 0 auto;
-  }
-}
-
-
-h2 {
-  font-size: .874em;
-  line-height:1;
-  margin-top:1.953em;
-
-  span {
-    display:block;
-    padding: $gutter--skinny 0;
-/*     position:relative; */
-/*     top:-.45em; */
-/*     padding: 0 5%; */
-/*     margin-top:-1em; */
-  }
-}
-
-
-h3,
-table caption {
-  font-style: italic;
-  font-weight:700;
-  font-size:1.229em;
-  margin:1em 0 .25em 0;
-}
-

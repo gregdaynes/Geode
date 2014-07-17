@@ -1,0 +1,75 @@
+/* -- Colors */
+/* ---- Cool */
+$color--aqua:  #7FDBFF;
+$color--blue:  #0054a4;
+$color--navy:  #001F3F;
+$color--teal:  #39CCCC;
+$color--green: #5d9632;
+$color--olive: #3D9970;
+$color--lime:  #01FF70;
+
+/* ---- Warm */
+$color--yellow:  #FFDC00;
+$color--orange:  #FF851B;
+$color--red:     #FF4136;
+$color--fuchsia: #F012BE;
+$color--purple:  #B10DC9;
+$color--maroon:  #85144B;
+
+/* ---- Gray Scale */
+$color--black:        #111;
+$color--gray-darker:  #222;
+$color--gray-dark:    #333;
+$color--gray:          #555;
+$color--gray-light:   #999;
+$color--gray-lighter: #eee;
+$color--white:        #fff;
+
+/* -- Gutters */
+$gutter--normal: 24px;
+$gutter--narrow: 12px;
+$gutter--skinny: 6px;
+
+/* -- Typography */
+$type--micro:  7px;
+$type--tiny:   9px;
+$type--small: 12px;
+$type--base:  16px;
+$type--title: 21px;
+$type--large: 28.424px;
+
+/* -- Sizes */
+$size--touch-target: 44px;
+$size--menu-width: 90%;
+$size--max-width: 960px;
+$size--width: 90%;
+$size--measure: 35em;
+
+/* -- Breakpoints */
+$palm:     em(300px);
+$lap:      em(768px);
+$desk:     em(1024px);
+
+/* -- Libraries  */
+/* ---- Typecsset */
+$typecsset-base-font-size:    $type--base;
+$typecsset-base-line-height:  32px;
+$typecsset-show-baseline:     false;
+
+/* ---- Grids */
+$grid__gutter:                $gutter--normal;
+$grid__responsive:            true;
+$grid__mobile-first:          true;
+$grid__use-silent-classes:    true;
+$grid__push:                  false;
+$grid__pull:                  false;
+$grid__use-markup-fix:        true;
+$grid__breakpoints: (
+  'palm' '(max-width: #{$palm})',
+  'lap' '(min-width: #{$lap}) and (max-width: #{$desk})',
+  'portable' '(max-width: #{$desk})',
+  'desk' '(min-width: #{$desk})'
+);
+$grid__breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
+$grid__breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
+$grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
