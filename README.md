@@ -265,3 +265,13 @@ https://github.com/gregdaynes/Geode/issues
 + [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
 + [hCard](http://microformats.org/wiki/hcard#Property_List)
 + [tinypng](http://tinypng.org/)
+
+
+
+
+
+## 11. Command Line Fun
+
++ Create template package
+
+    zip -r geode-vX.x.x.hammer ./ -x Build\* *.git* *.DS_Store*
