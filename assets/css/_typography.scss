@@ -52,29 +52,26 @@
 
 %measure {
   width: 100%;
-  max-width: $size--measure;
+  max-width: $type__measure;
 }
 
 %font-serif {
-  font-family: serif;
-
-  @media (min-width: em(1000px)) {
-    font-family: 'Source Serif Pro', serif;
-  }
+  font-family: $type__serif--small_screen;
+  @media (min-width: $type--cutom_font_width) { font-family: $type__serif; }
 }
 
 %font-sans-serif {
-  font-family: sans-serif;
+  font-family: $type__sans-serif--small_screen;
 
-  @media (min-width: em(1000px)) {
-    font-family: 'Source Sans Pro', sans-serif;
+  @media (min-width: $type--cutom_font_width) {
+    font-family: $type__sans-serif;
   }
 }
 
 %font-mono {
-  font-family: monospace;
+  font-family: $type__mono--small_screen;
 
-  @media (min-width: em(1000px)) {
-    font-family: 'Source Code Pro', monospace;
+  @media (min-width: $type--cutom_font_width) {
+    font-family: $type__mono;
   }
 }

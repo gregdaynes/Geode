@@ -9,15 +9,15 @@
 # SITE
 
   Version: <!-- $version -->
-  Last update: <!-- $date --> 
+  Last update: <!-- $date -->
 
 # THANKS
 
     Riot -- @riothq
-    
+
     Andrew Clarke -- @malarky
 
-# TECHNOLOGY
+# COMPONENTS
 
     HTML5
     CSS3
@@ -29,10 +29,8 @@
     Hammer -- @hammerformac
     Grunt
     Github
-    
-    
+
+
 # LIBRARIES
-    
-    Typecsset         -- github.com/csswizardry/typecsset | github.com/Cleecanth/typecsset
-    CSSWizardry-Grids -- github.com/csswizardry/csswizardry-grids | github.com/felics/csswizardry-grids
-    
+
+    Magic Grids -- //raw.githubusercontent.com/jeffjewiss/magic-grids/master/_magic-grids.scss

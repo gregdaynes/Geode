@@ -1,40 +1,77 @@
-/* -- Colors */
-/* ---- Cool */
-$color--aqua:  #7FDBFF;
+// <!-- $name --> by <!-- $creatorName -->
+// Version: <!-- $version -->
+// URL: <!-- $siteUrl -->
+// Version: <!-- $license -->
+
+
+// -- Colors
+// ---- Cool
+$color--aqua:  #7fdbff;
 $color--blue:  #0054a4;
-$color--navy:  #001F3F;
-$color--teal:  #39CCCC;
+$color--navy:  #001f3f;
+$color--teal:  #39cccc;
 $color--green: #5d9632;
-$color--olive: #3D9970;
-$color--lime:  #01FF70;
+$color--olive: #3d9970;
+$color--lime:  #01ff70;
 
-/* ---- Warm */
-$color--yellow:  #FFDC00;
-$color--orange:  #FF851B;
-$color--red:     #FF4136;
-$color--fuchsia: #F012BE;
-$color--purple:  #B10DC9;
-$color--maroon:  #85144B;
+// ---- Warm
+$color--yellow:  #ffdc00;
+$color--orange:  #ff851b;
+$color--red:     #ff4136;
+$color--fuchsia: #f012be;
+$color--purple:  #b10dc9;
+$color--maroon:  #85144b;
 
-/* ---- Gray Scale */
-$color--black:        #111;
-$color--gray-darker:  #222;
-$color--gray-dark:    #333;
-$color--gray:          #555;
-$color--gray-light:   #999;
-$color--gray-lighter: #eee;
-$color--white:        #fff;
+// ---- Gray Scale
+$color--black:        #111111;
+$color--gray-darker:  #222222;
+$color--gray-dark:    #333333;
+$color--gray:         #555555;
+$color--gray-light:   #999999;
+$color--gray-lighter: #eeeeee;
+$color--white:        #ffffff;
 
 /* ---- Custom */
 $color--cosmic-latte: #FFF8E7;
 $color--becca-purple: #663399;
 
-/* -- Gutters */
-$gutter--normal: 24px;
-$gutter--narrow: 12px;
-$gutter--skinny: 6px;
+// ---- Mains
+$color--primary:   #929a00;
+$color--secondary: #a33215;
+$color--tertiary:  #282f36;
 
-/* -- Typography */
+// ---- Neutrals
+$color--neutral:          #473f3f;
+$color--neutral_medium:   darken($color--neutral, 25%);
+$color--neutral_dark:     darken($color--neutral, 50%);
+$color--neutral_light:    lighten($color--neutral,25%);
+$color--neutral_lighter:  lighten($color--neutral,50%);
+$color--neutral_lightest: lighten($color--neutral,70%);
+
+// ---- Links
+$link__color:          $color--primary;
+$link__color--hover:   darken($color--primary, 10);
+$link__color--visited: darken($color--primary, 10);
+$link__color--focus:   darken($color--primary, 10);
+
+// ---- Messages
+$alert__color:   #da4f49;
+$error__color:   #b01400;
+$info__color:    #d8dca2;
+$inverse__color: #414141;
+$success__color: #bcd3de;
+$warning__color: $error__color;
+
+// ---- Page Atomosphere
+$body__color: $color--white;
+$text__color: #473f3f;
+
+
+
+
+
+// -- Typography
+// ---- Sizes
 $type--micro:  7px;
 $type--tiny:   9px;
 $type--small: 12px;
@@ -42,25 +79,53 @@ $type--base:  16px;
 $type--title: 21px;
 $type--large: 28.424px;
 
-/* -- Sizes */
+// ---- Font Measurements
+$type--cutom_font_width: em(1000px); // width to load external fonts
+$type__baseline-height: 1.5em;
+$type__measure: 35em;
+
+// ---- Font Families
+$type__serif: 'Source Serif Pro', serif;
+$type__serif--small_screen: serif;
+$type__sans-serif: 'Source Sans Pro', sans-serif;
+$type__sans-serif--small_screen: sans-serif;
+$type__mono: 'Source Code Pro', monospace;
+$type__mono--small_screen: monospace;
+
+
+
+
+
+// -- Sizes
 $size--touch-target: 44px;
 $size--menu-width: 90%;
 $size--max-width: 960px;
 $size--width: 90%;
-$size--measure: 35em;
 
-/* -- Breakpoints */
+
+
+
+
+// -- Gutters
+$gutter--normal: 24px;
+$gutter--narrow: 12px;
+$gutter--skinny: 6px;
+
+
+
+
+
+// -- Breakpoints
 $palm:     em(300px);
 $lap:      em(768px);
 $desk:     em(1024px);
 
-/* -- Libraries  */
-/* ---- Typecsset */
-$typecsset-base-font-size:    $type--base;
-$typecsset-base-line-height:  32px;
-$typecsset-show-baseline:     false;
 
-/* ---- Grids */
+
+
+
+// -- Libraries
+// ---- Grids
 $grid__gutter:                $gutter--normal;
 $grid__responsive:            true;
 $grid__mobile-first:          true;

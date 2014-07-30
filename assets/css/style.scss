@@ -1,0 +1,61 @@
+// <!-- $name --> by <!-- $creatorName -->
+// Version: <!-- $version -->
+// URL: <!-- $siteUrl -->
+// Version: <!-- $license -->
+
+// $FUNCTIONS
+// -- em($px) - convert px to ems
+@import "functions";
+
+
+// $VARIABLES
+@import "variables";
+
+
+// $RESETS
+@import "normalize-3.0.1";
+@import "normalize-opentype-0.1.2";
+
+
+// $EXTENDS
+// -- %ir - image replacement for text
+// -- %hide - hide element from screen
+// -- %zero - remove padding & margin
+// -- %clean-list - remove list formatting
+// -- %clearfix - clear floats
+// -- %outline - outline element in red border
+// -- %container - responsive center aligned
+@import "extends";
+
+
+// $MIXINS
+// -- @mediaQuery - value, constraint, target
+// -- @vertical-gradient - start, stop, direction
+// -- @ir - image replacement (no args)
+@import "mixins";
+
+
+// $SCAFFOLDING
+@import "magic-grids";
+
+
+// $TYPOGRAPHY
+@import "typography";
+
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%; // Prevent iOS text size adjust after orientation change, without disabling user zoom.
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  @extend %font-sans-serif;
+
+  margin: 0; // Remove default margin.
+  font-size: 100%;
+  line-height: $type__baseline-height;
+}
