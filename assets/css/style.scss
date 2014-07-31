@@ -22,9 +22,7 @@
 // -- %hide - hide element from screen
 // -- %zero - remove padding & margin
 // -- %clean-list - remove list formatting
-// -- %clearfix - clear floats
 // -- %outline - outline element in red border
-// -- %container - responsive center aligned
 @import "extends";
 
 
@@ -36,8 +34,8 @@
 
 
 // $SCAFFOLDING
-@import "magic-grids";
-
+// @import "magic-grids";
+@import "neat";
 
 // $TYPOGRAPHY
 @import "typography";
@@ -58,4 +56,331 @@ body {
   margin: 0; // Remove default margin.
   font-size: 100%;
   line-height: $type__baseline-height;
+  font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  GENERIC
+
+  %container {}
+
+  .section-title {}
+  .small-print {}
+  .section-title__small-print {}
+  .button {}
+  .button--primary {}
+  .button--secondary {}
+\*--------------------------------*/
+%container {
+  display: block;
+
+  padding-top: $gutter--skinny;
+  padding-right: $gutter--narrow;
+  padding-bottom: $gutter--normal;
+  padding-left: $gutter--narrow;
+
+  @media only screen and (min-width: $desk) {
+    padding-top:    $gutter--narrow;
+    padding-right:  $gutter--normal;
+    padding-bottom: $gutter--narrow;
+    padding-left:   $gutter--normal;
+  }
+}
+
+.section-title {
+  @extend %font-sans-serif;
+}
+
+.small-print {
+  @extend %font-serif;
+  font-weight: 200;
+}
+
+.section-title__small-print {
+  color: $color--neutral_lighter;
+  margin-left: $gutter--narrow;
+  font-style: italic;
+}
+
+.button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $color--neutral;
+  border-radius: 3px;
+  background-image: none;
+  background-color: $color--neutral;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1),
+              inset 0 1px 0 $color--neutral-lighter;
+  color: $color--white;
+  line-height: $size--touch-target;
+  padding-right: $gutter--narrow;
+  padding-left: $gutter--narrow;
+  margin-top: $gutter--skinny;
+  margin-top: $gutter--skinny;
+
+  @include linear-gradient($color--neutral_light, $color--neutral);
+
+  @media only screen and (min-width: $desk) {
+    line-height: inherit;
+    padding-top: $gutter--skinny;
+    padding-right: $gutter--narrow;
+    padding-bottom: $gutter--skinny;
+    padding-left: $gutter--narrow;
+  }
+
+}
+
+.button--primary {
+  border-color: darken($color--secondary, 5%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1),
+              inset 0 1px 0 lighten($color--secondary, 20%);
+  @include linear-gradient( lighten($color--secondary, 10%), $color--secondary);
+}
+
+.button--secondary {
+  border-color: $color--neutral_light;
+  color: $color--neutral_light;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+/*--------------------------------*\
+  SITE HEADER
+
+  .site-header {}
+    .site-header__logo-container {}
+      .site-header__logo {}
+      .site-header__tagline {}
+\*--------------------------------*/
+.site-header {
+  height: 200px;
+  position: relative;
+  background-color: $color--neutral_light;
+  color: $color--white;
+}
+
+.site-header__logo-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.site-logo,
+.site-tagline {
+  text-align: center;
+}
+
+.site-logo {
+
+}
+
+.site-tagline {
+  @extend %font-serif;
+
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  SITE NAV
+
+  .site-nav {}
+    .site-nav__list {}
+      .site-nav__item {}
+        .site-nav__link {}
+\*--------------------------------*/
+.site-nav {
+  background-color: $color--secondary;
+}
+
+.site-nav__list {
+  @extend %clean-list;
+
+  text-align: center
+}
+
+.site-nav__item {
+  display: inline-block;
+}
+
+.site-nav__link {
+  color: $color--white;
+  text-decoration: none;
+  display: block;
+  line-height: $size--touch-target;
+  padding-right: $gutter--narrow;
+  padding-left: $gutter--narrow;
+
+  @media only screen and (min-width: $desk) {
+    line-height: inherit;
+    padding-top: $gutter--skinny;
+    padding-right: $gutter--narrow;
+    padding-bottom: $gutter--skinny;
+    padding-left: $gutter--narrow;
+  }
+}
+
+
+
+
+
+
+
+/*--------------------------------*\
+  section: PRIMARY
+
+  .primary {}
+    .primary__title {}   //  .section__title {}
+    .primary__copy {}    //  .copy {}  .copy-lead {}
+    .primary__button {}  //  .button {}  button--primary {}  .button--secondary {}
+\*--------------------------------*/
+.primary {
+  @extend %container;
+
+  background-color: $color--primary;
+  color: $color--white;
+}
+
+.primary__button.button--secondary {
+  border-color: $color--neutral_lightest;
+  color: $color--neutral_lightest;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  section: SECONDARY
+
+  .secondary {}
+    .secondary__title {}   //  .section__title {}
+    .secondary__copy {}    //  .copy {}  .copy-lead {}
+    .secondary__button {}  //  .button {}  button--primary {}  .button--secondary {}
+\*--------------------------------*/
+.secondary {
+  @extend %container;
+
+  background-color: $color--secondary;
+  color: $color--white;
+}
+
+.secondary__button.button {
+  border-color: darken($color--neutral, 5%);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1),
+              inset 0 1px 0 $color--neutral-lighter;
+  @include linear-gradient($color--neutral_light, $color--neutral);
+}
+
+.secondary__button.button--secondary {
+  background-image: none;
+  background-color: transparent;
+  border-color: $color--neutral_lightest;
+  color: $color--neutral_lightest;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+/*--------------------------------*\
+  section: TERTIARY
+
+  .tertiary {}
+    .tertiary__title {}   //  .section__title {}
+    .tertiary__copy {}    //  .copy {}  .copy-lead {}
+    .tertiary__button {}  //  .button {}  button--primary {}  .button--secondary {}
+\*--------------------------------*/
+.tertiary {
+  @extend %container;
+
+  background-color: $color--neutral_lighter;
+  color: $color--neutral_dark;
+}
+
+.tertiary__title {
+  color: $color--neutral_medium;
+}
+
+.tertiary__title .small-print {
+  color: $color--neutral;
+}
+
+.tertiary__button.button {
+  color: $color--neutral_lightest;
+  border-color: $color--neutral_light;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1),
+              inset 0 1px 0 $color--neutral-lightest;
+  @include linear-gradient($color--neutral_lighter, $color--neutral_light);
+}
+
+.tertiary__button.button--secondary {
+  background-image: none;
+  background-color: transparent;
+  border-color: $color--neutral_lightest;
+  color: $color--neutral_lightest;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  section: MAIN
+
+  .main {}
+    .main__title {}   //  .section__title {}
+    .main__article {} //  .article {}
+      .article-header {}
+        .article-header__head-title {}
+          .article-header__title {}  //  .article-title {}
+          .article-header__small-print {} // .small-print {}
+        .article-header__byline {}  // .byline {}
+          .byline__title {}
+          .byline__description {}
+          .byline__title--author {} | --date | --email
+          .byline__description--author {} | -- date | --email
+      .article__copy {} //  .copy {} .copy__lead {} .copy--secondary {}
+      .article-footer {}
+\*--------------------------------*/
+.main {
+  @extend %container;
 }
