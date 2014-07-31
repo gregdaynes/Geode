@@ -1,11 +1,15 @@
 <section class="tertiary">
+  <input class="tertiary__checkbox  reveal-box" type="checkbox" name="tertiary__checkbox" id="tertiary__checkbox" />
   <h2 class="tertiary__title  section-title">
-    Tertiary Block
+    <label class="tertiary__checkbox-label  reveal-box__label"
+           for="tertiary__checkbox">Tertiary Block</label>
     <small class="section-title__small-print  small-print">The most likely to be ignored block</small>
   </h2>
 
-  <p class="tertiary__copy  copy  copy--lead"><!-- @include placeholder --></p>
+  <div class="tertiary__content  content-container">
+    <p class="tertiary__copy  copy  copy--lead"><!-- @include placeholder --></p>
 
-  <button class="tertiary__button  button  button--primary">Primary Button!</button>
-  <button class="tertiary__button  button  button--secondary">Secondary Button!</button>
+    <button class="tertiary__button  button  button--primary">Primary Button!</button>
+    <button class="tertiary__button  button  button--secondary">Secondary Button!</button>
+  </div>
 </section>

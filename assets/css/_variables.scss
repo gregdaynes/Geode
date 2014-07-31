@@ -102,6 +102,9 @@ $size--menu-width: 90%;
 $size--max-width: 960px;
 $size--width: 90%;
 
+// ---- NEAT page width
+$max-width: 100%;
+
 
 
 
@@ -119,3 +122,18 @@ $gutter--skinny: 6px;
 $palm:     em(300px);
 $lap:      em(768px);
 $desk:     em(1024px);
+
+
+
+
+
+
+
+/* Fix Android */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+  from {padding:0;}
+  to {padding:0;}
+}

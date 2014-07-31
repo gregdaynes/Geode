@@ -68,6 +68,10 @@ body {
 
 
 
+
+
+
+
 /*--------------------------------*\
   GENERIC
 
@@ -251,20 +255,75 @@ body {
 
 
 
+
+/*--------------------------------*\
+  object: Reveal Box
+
+  .reveal-box {}
+  .reveal-box__label {}
+\*--------------------------------*/
+.reveal-box {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.reveal-box__label {
+  cursor: pointer;
+}
+
+.reveal-box ~ .content-container {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s, padding 0.15s;
+  padding-bottom: 0;
+
+
+  @media only screen and (min-width: $desk) {
+    max-height: 1000px;
+    padding-bottom: $gutter--normal;
+  }
+}
+
+.reveal-box:checked ~ .content-container {
+  max-height: 1000px;
+  padding-bottom: $gutter--normal;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  section: PRIMARY SECONDARY TERTIARY
+\*--------------------------------*/
+
+
+
+
+
+
+
+
+
 /*--------------------------------*\
   section: PRIMARY
 
   .primary {}
     .primary__title {}   //  .section__title {}
-    .primary__copy {}    //  .copy {}  .copy-lead {}
-    .primary__button {}  //  .button {}  button--primary {}  .button--secondary {}
+    .primary__content {} // .content-container {}
+      .primary__copy {}    //  .copy {}  .copy-lead {}
+      .primary__button {}  //  .button {}  button--primary {}  .button--secondary {}
 \*--------------------------------*/
 .primary {
   @extend %container;
 
   background-color: $color--primary;
   color: $color--white;
-  padding-bottom: $gutter--normal;
+  padding-bottom: 0;
 }
 
 .primary__button.button--secondary {
@@ -294,7 +353,7 @@ body {
 
   background-color: $color--secondary;
   color: $color--white;
-  padding-bottom: $gutter--normal;
+  padding-bottom: 0;
 }
 
 .secondary__button.button {
@@ -331,7 +390,7 @@ body {
 
   background-color: $color--neutral_lighter;
   color: $color--neutral_dark;
-  padding-bottom: $gutter--normal;
+  padding-bottom: 0;
 }
 
 .tertiary__title {
@@ -376,8 +435,15 @@ body {
 \*--------------------------------*/
 .main {
   @extend %container;
-  
+
   @include outer-container;
+}
+
+.main__title, .main__title .small-print {
+  max-height: 0;
+  margin: 0;
+  visibility: hidden;
+  overflow: hidden
 }
 
 
@@ -405,11 +471,11 @@ body {
     .article-footer {}
 \*--------------------------------*/
 .article {
-  
+
   @media only screen and (min-width: $desk) {
     @include span-columns(8);
   }
-  
+
 }
 
 
@@ -429,7 +495,7 @@ body {
         .link-list__link {}
 \*--------------------------------*/
 .article-aside {
-  
+
   @media only screen and (min-width: $desk) {
     @include span-columns(4);
   }
@@ -456,3 +522,15 @@ body {
         .newsletter-input__email-address {} // .inpput {}  .input--email {}
         .newsletter__button {} //  .button {} .button--primary {}
 \*--------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,11 +1,14 @@
 <section class="secondary">
+  <input class="secondary__checkbox  reveal-box" type="checkbox" name="secondary__checkbox" id="secondary__checkbox" />
   <h2 class="secondary__title  section-title">
-    Secondary Block
+    <label class="secondary__checkbox-label  reveal-box__label"
+           for="secondary__checkbox">Secondary Block</label>
     <small class="section-title__small-print  small-print">Not the most important block, but still important</small>
   </h2>
 
-  <p class="secondary__copy  copy  copy--lead"><!-- @include placeholder --></p>
-
-  <button class="secondary__button  button  button--primary">Primary Button!</button>
-  <button class="secondary__button  button  button--secondary">Secondary Button!</button>
+  <div class="secondary__content  content-container">
+    <p class="secondary__copy  copy  copy--lead"><!-- @include placeholder --></p>
+    <button class="secondary__button  button  button--primary">Primary Button!</button>
+    <button class="secondary__button  button  button--secondary">Secondary Button!</button>
+  </div>
 </section>
