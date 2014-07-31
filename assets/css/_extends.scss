@@ -27,20 +27,6 @@
     list-style: none;
   }
 
-  // %clearfix - clear floats
-  %clearfix {
-    zoom:1;
-    &:before, &:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      overflow: hidden;
-    }
-    &:after {
-      clear: both;
-    }
-  }
-
   // %outline - outline element in red border
   %o, %outline, %s, %show, %h, %highlight {
     box-shadow: inset -1px -1px 0 red,
@@ -53,16 +39,4 @@
       background-color: rgba(255,0,0,0.3) !important;
     }
 
-  }
-
-  // %container - responsive center aligned
-  %container {
-    margin: 0 auto;
-    max-width: $size--max-width;
-    width: $size--width;
-  }
-
-  %center {
-    margin-left: auto;
-    margin-right: auto;
   }

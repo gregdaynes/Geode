@@ -119,26 +119,3 @@ $gutter--skinny: 6px;
 $palm:     em(300px);
 $lap:      em(768px);
 $desk:     em(1024px);
-
-
-
-
-
-// -- Libraries
-// ---- Grids
-$grid__gutter:                $gutter--normal;
-$grid__responsive:            true;
-$grid__mobile-first:          true;
-$grid__use-silent-classes:    true;
-$grid__push:                  false;
-$grid__pull:                  false;
-$grid__use-markup-fix:        true;
-$grid__breakpoints: (
-  'palm' '(max-width: #{$palm})',
-  'lap' '(min-width: #{$lap}) and (max-width: #{$desk})',
-  'portable' '(max-width: #{$desk})',
-  'desk' '(min-width: #{$desk})'
-);
-$grid__breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
-$grid__breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
-$grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
