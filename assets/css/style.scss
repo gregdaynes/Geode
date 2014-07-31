@@ -264,6 +264,7 @@ body {
 
   background-color: $color--primary;
   color: $color--white;
+  padding-bottom: $gutter--normal;
 }
 
 .primary__button.button--secondary {
@@ -293,6 +294,7 @@ body {
 
   background-color: $color--secondary;
   color: $color--white;
+  padding-bottom: $gutter--normal;
 }
 
 .secondary__button.button {
@@ -329,6 +331,7 @@ body {
 
   background-color: $color--neutral_lighter;
   color: $color--neutral_dark;
+  padding-bottom: $gutter--normal;
 }
 
 .tertiary__title {
@@ -369,18 +372,87 @@ body {
   .main {}
     .main__title {}   //  .section__title {}
     .main__article {} //  .article {}
-      .article-header {}
-        .article-header__head-title {}
-          .article-header__title {}  //  .article-title {}
-          .article-header__small-print {} // .small-print {}
-        .article-header__byline {}  // .byline {}
-          .byline__title {}
-          .byline__description {}
-          .byline__title--author {} | --date | --email
-          .byline__description--author {} | -- date | --email
-      .article__copy {} //  .copy {} .copy__lead {} .copy--secondary {}
-      .article-footer {}
+    .marin__article-aside {} // .article-aside {}
 \*--------------------------------*/
 .main {
   @extend %container;
+  
+  @include outer-container;
 }
+
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  block: ARTICLE
+
+  .article {}
+    .article-header {}
+      .article-header__head-title {}
+        .article-header__title {}  //  .article-title {}
+        .article-header__small-print {} // .small-print {}
+      .article-header__byline {}  // .byline {}
+        .byline__title {}
+        .byline__description {}
+        .byline__title--author {} | --date | --email
+        .byline__description--author {} | -- date | --email
+    .article__copy {} //  .copy {} .copy__lead {} .copy--secondary {}
+    .article-footer {}
+\*--------------------------------*/
+.article {
+  
+  @media only screen and (min-width: $desk) {
+    @include span-columns(8);
+  }
+  
+}
+
+
+
+
+
+
+
+/*--------------------------------*\
+  block: ARTICLE
+
+  .article-aside {}
+    .article-aside__title {}  // .section-title {}
+    .article-aside__copy {} // .copy {}
+    .article-aside__link-list {} // .link-list {}
+      .link-list__item {}
+        .link-list__link {}
+\*--------------------------------*/
+.article-aside {
+  
+  @media only screen and (min-width: $desk) {
+    @include span-columns(4);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------*\
+  block: NEWSLETTER
+
+  .newsletter {}
+    .newsletter__title {}  //  .section-title {}
+    .copy {} //  .copy {}
+    .newsletter__form {} //  .form {}
+      .newsletter-label {}  .label {}
+        .newsletter-input__email-address {} // .inpput {}  .input--email {}
+        .newsletter__button {} //  .button {} .button--primary {}
+\*--------------------------------*/
