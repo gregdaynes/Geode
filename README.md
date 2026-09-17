@@ -10,8 +10,6 @@ Working with _Geode_ is fast and easy.
 
 
 
-
-
 Contents
 
 1. Introduction
@@ -24,8 +22,6 @@ Contents
 8. Development Map
 9. Issues & Feature Request
 10. Notes & References
-
-
 
 
 
@@ -47,9 +43,6 @@ Navigate to [Geode releases on Github.com](https://github.com/gregdaynes/Geode/r
 
 
 
-
-
-
 ## 4. Working with Geode
 
 _Geode_ works as a standalone Hammer template
@@ -59,12 +52,10 @@ _Geode_ works as a standalone Hammer template
 To use _Geode_ with just Hammer
 1. Create a new project using the Geode Template.
 
-2. customize the variables in the variables.html file located in the partials directory
+2. customize the variables in the variables.html file located in the top-level folder
   + _Definitions of the variables are lower in this document._
 
 3. Build with Hammer.
-
-
 
 
 
@@ -125,8 +116,6 @@ Working with Hammer — you'll want to edit the _variables.html file found in th
 19. $date
   - Change to adjust the created dates
   - If using Grunt - leave as is - this will be automatically generated
-
-
 
 
 
@@ -226,7 +215,6 @@ Any repeat include elements after the $elementVariable is defined, will continue
 
 
 
-
 ## 8. Development Map
 
 _Geode_ is not under any scheduled development. It remains as a side project of @gregdaynes and as such is only worked on when time or resources permit.
@@ -244,12 +232,10 @@ _Geode_ is not under any scheduled development. It remains as a side project of 
 
 
 
-
 ## 9. Issues & Feature Requests
 
 Use Github to report issues and feature requests
 https://github.com/gregdaynes/Geode/issues
-
 
 
 
@@ -265,7 +251,6 @@ https://github.com/gregdaynes/Geode/issues
 + [Optimized GA script](http://mathiasbynens.be/notes/async-analytics-snippet)
 + [hCard](http://microformats.org/wiki/hcard#Property_List)
 + [tinypng](http://tinypng.org/)
-
 
 
 
